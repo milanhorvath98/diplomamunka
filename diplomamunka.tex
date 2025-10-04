@@ -31,7 +31,7 @@
 %\usepackage[T1]{fontenc} %Betűtípus beállításhoz
 
 \usepackage{fontspec}
-\setmainfont{Times New Roman}
+% \setmainfont{Times New Roman}
 \usepackage{lipsum}
 \usepackage{tikz}
 \usepackage{pdfpages}
@@ -378,106 +378,15 @@ magyarázata első előfordulási helyüknél található.
 % Főszöveg [The main part of the thesis]
 \cleardoublepage
 \pagenumbering{arabic}
-\chapter{Szakirodalmi áttekintés}
+\chapter{Irodalmi áttekintés}
 
-\section{Alapfogalmak és elméleti háttér}
-A következőkben szeretnék kitérni a végeselem analízis témakörébe tartozó alapfogalmakra és a végeselem analízis elméleti hátterére. A fejezetben kitérek az alapvető elméletére, a merevségi mátrixra, a hálózásra, az anyagmodellekre, valamint a kezdeti- és peremfeltételekre.
-\subsection{Alapvető elméleti koncepciók}
-\textbf{Az energiaelv és a virtuális munka elve:}
-\begin{itemize}
-    \item \textbf{Az energiaelv:} Ezt az elvet arra használjuk, hogy megállapítsuk egy rendszer mechanikai állapotát, ahol az energia minimalizálása hozza létre az egyensúlyi állapotot. A potenciális energia minimális értéke az egyensúlyi konfigurációban fog megjelenni, ami alapvető a végeselem-módszerben történő modellezéskor.
-    \item \textbf{A virtuális munka elve:} Egy másik alapvető koncepció, amely az anyagokon és szerkezeteken belüli belső erők és a külső terhelések közötti egyensúlyt írja le virtuális elmozdulásokon keresztül. Ezt az elvet arra használjuk, hogy a külső terhelések által végzett virtuális munka egyenlő legyen a belső erők által végzett virtuális munkával \cite{voros2012veges,pere2011vem}.
-\end{itemize}
-\newpage
+\chapter{Anyagok és módszerek}
 
-\subsection{Merevségi mátrix}
-A végeselem-analízis egyik kulcsfontosságú fogalma a merevségi mátrix, amely az egyes elemek merevségét reprezentálja és az egész szerkezet viselkedését határozza meg. Az egyes elemek merevségi mátrixait úgy tervezzük meg és aggregáljuk össze, hogy azok a globális szerkezeti modellt hozzák létre. Ez a globális mátrix tartalmazza az összes elemre vonatkozó merevségi információkat és lehetővé teszi, hogy a szerkezet teljes válaszát meghatározzuk a terhelések alatt.
+\chapter{Szerszámkialakítás}
 
-A lokális merevségi mátrixok minden egyes végeselem számára külön-külön kerülnek meghatározásra, figyelembe véve az adott elem anyagi tulajdonságait, méreteit és a szerkezet geometriai viszonyait. Ezeket a lokális mátrixokat azután összeállítjuk egy globális merevségi mátrixba, amely a teljes szerkezet merevségi viszonyait írja le. Az aggregáció során figyelembe vesszük az elemek közötti csatlakozási pontokat és a határfeltételeket is.
+\chapter{Mérési eredmények értékelése}
 
-A merevségi mátrix kialakítása a virtuális munka elvére és az energia megőrzésének elvére épül. Ez azt jelenti, hogy a szerkezet deformációjakor felhalmozódó belső rugalmas energia egyenlő a külső terhelések által végzett munkával. A virtuális munka elvének alkalmazásával a szerkezet egyensúlyi állapotát úgy írhatjuk le, hogy a virtuális elmozdulások esetén a belső és külső erők virtuális munkája nulla.
-
-A merevségi mátrix fontos szerepet játszik abban, hogy modellezni tudjuk a szerkezeti elemek közötti kölcsönhatásokat. A mátrix elemei közvetlenül tükrözik az elemi csomópontok közötti merevségi kapcsolatokat, amelyek meghatározzák, hogyan oszlanak meg és terjednek el a belső erők és nyomatékok a szerkezeten belül. Ezáltal a merevségi mátrix nem csak az egyes elemek, hanem az elemek közötti kölcsönhatások viselkedését is leírja, lehetővé téve az analízis során a komplex terhelési állapotok pontos előrejelzését.
-
-A merevségi mátrix létrehozása matematikailag a lokális elemi merevségi mátrixok egyesítésével történik, amelyeket a globális koordinátarendszerbe transzformálnak. Az alábbiakban egy egyszerűsített formában mutatom be a merevségi mátrix egy elemre vonatkozó képletét és a globális merevségi mátrixra való összeállítását. A merevségi mátrix $[K]$ az egyes elemek $D$ deformációs energiajának deriváltjaként jön létre a nodális elmozdulások u függvényében:
-\begin{equation}
-    [K] = \dfrac{\partial^2 D}{\partial u^2}
-\end{equation}
-ahol:
-\begin{itemize}
-    \item $[K]$: a merevségi mátrix,
-    \item $D$: az elem deformációs energiája,
-    \item $u$: a csomóponti elmozdulások vektora.
-\end{itemize}
-
-Egy konkrét elem $e$ merevségi mátrixát a következő képlet adja meg, ahol $E$ a rugalmassági modulus, $A$ az elem keresztmetszeti területe, $L$ az elem hossza, és az integrálást az elem hossza mentén végzik:
-\begin{equation}
-    [K^{(e)}] = \frac{E A}{L}
-    \begin{bmatrix}
-        1   &   -1 \\
-        -1  &   1
-    \end{bmatrix}
-\end{equation}
-
-Az egész szerkezetre vonatkozó globális merevségi mátrix a következőképpen áll össze az egyes elemek lokális merevségi mátrixainak összeállításával és a megfelelő csomópontokhoz való hozzárendeléssel:
-
-\begin{equation}
-    [K_{\text{global}}] = \sum_{e=1}^{n} [T^{(e)}]^\top [K^{(e)}] [T^{(e)}]
-\end{equation}
-itt:
-\begin{itemize}
-    \item $[K^{(e)}]$: az $e$-edik elem lokális merevségi mátrixa,
-    \item $[T^{(e)}]$: a transzformációs mátrix, ami az $e$-edik elem lokális koordinátáit transzformálja a globális koordinátarendszerbe,
-    \item $n$ az elemek száma a szerkezetben.
-\end{itemize}
-
-A transzformációs mátrixok és a globális koordinátarendszerbe történő integrálás biztosítja, hogy minden elem merevségi jellemzői megfelelően szerepeljenek a teljes szerkezet merevségi viselkedésének modellezésében \citep{voros2012veges,paczelt2007veges,VEM2011}.
-
-\subsection{Hálózás}
-A hálózás a végeselem-analízis (FEM) egyik alappillére, hiszen a komplex geometriai formák és szerkezeti problémák számítását a véges elemekre való felosztás teszi lehetővé. A háló esszenciálisan egy digitális rács, ami a fizikai testet kisebb, kezelhető elemekre, úgynevezett véges elemekre bontja le. Ezen elemek közötti kapcsolatok és kölcsönhatások modellezik a teljes szerkezet viselkedését a valóságban jelentkező terhelések és környezeti hatások alatt.
-
-A hálózás során az a cél, hogy a modell geometriáját és a szerkezeti viselkedését lehető legpontosabban leképezzük, miközben gazdaságosak maradunk a számítási erőforrásokkal. A háló kialakítása során olyan döntéseket kell meghozni, amelyek befolyásolják az analízis pontosságát és hatékonyságát, mint például az elemek mérete, alakja és eloszlása. Az ideális háló finoman követi a geometriai kontúrokat, elkerülve a túl nagy vagy túl kis elemeket, amelyek torzíthatják az eredményeket vagy feleslegesen növelik a számítási igényeket.
-
-A háló minőségének biztosítása elengedhetetlen a megbízható FEM eredményekhez. Ha a háló nem megfelelően van felosztva, pontatlan eredményeket adhat, és ezen felül számítási hibákhoz is vezethet. Ebből adódóan, a hálózás nem egyszerűen a modell részekre történő bontása, hanem kritikus lépés a szerkezeti elemzésben, amely megalapozza a további analízis pontosságát és érvényességét.
-
-A lineáris és kvadratikus elemek kiválasztása során figyelembe kell venni a vizsgálati célt, a rendelkezésre álló számítási erőforrásokat, valamint a kívánt pontosság és felbontás egyensúlyát. A kvadratikus elemek alkalmazása ajánlott ott, ahol az eredmények nagy pontossága elengedhetetlen, különösen ott, ahol a szerkezeti viselkedésben nemlineáris vagy nagyfokú geometriai változások vannak. Az ilyen elemek használata növelheti a számítási időt, de csökkentheti a szükséges elemek összmennyiségét a hálóban, optimalizálva ezzel a számítások gazdaságosságát. A lineáris elemek egyszerűbb esetekben, ahol a pontosság kevésbé kritikus, gyors és hatékony megoldást nyújthatnak. Az adaptív hálózati stratégiák segítségével tovább finomítható a háló a szükséges pontosság és számítási hatékonyság elérése érdekében \cite{tamas2014vegeselem}.
-
-\subsection{Anyagtulajdonságok és anyagmodellek}
-Az anyagtulajdonságok megfelelő meghatározása létfontosságú a végeselem-analízisben, hiszen ezek a paraméterek határozzák meg, hogy a szimulált szerkezeti elemek hogyan reagálnak a terhelésekre. A szakítópofák esetében különösen fontos, hogy az anyagtulajdonságok pontosan tükrözzék a valós viselkedést, mivel ezek a szerkezeti komponensek gyakran kerülnek maximális terhelés alá a vizsgálatok során.
-
-\textbf{Rugalmassági modulus $(E)$:} Az anyag merevségét jellemzi, és azt fejezi ki, hogy az anyag mennyire ellenáll az alakváltozásnak. Nagyobb modulus esetén az anyag kevésbé deformálódik azonos feszültség hatására.
-
-\textbf{Poisson-tényező $(\nu)$:} Ez az arányossági tényező leírja az anyag hosszanti megnyúlása és a keresztirányú összehúzódása közötti viszonyt.
-
-\textbf{Szakítószilárdság $(\sigma_u)$:} Az a maximális feszültség, amit az anyag elvisel törés nélkül. Ez egy kritikus paraméter a törési analízisben.
-
-Az anyagmodell kiválasztása a vizsgálandó jelenségektől függ. Ha az anyag viselkedése a vizsgált terhelési tartományban lineárisan rugalmas, akkor egy lineáris rugalmas modell alkalmazása elegendő. Itt az anyag viselkedése a Hooke-törvény által leírt módon lineáris, azaz az anyagban ébredő feszültség arányos az alakváltozással. Ebben az esetben az anyagmodell csak a rugalmassági modulust és a Poisson-tényezőt foglalja magában.
-
-Elasztikus-plasztikus modellek alkalmazása akkor szükséges, ha az anyag átlépi a rugalmas tartományát és plasztikus alakváltozást szenved. Ezen modellek paramétereit sokkal összetettebb kalibrálni, mert figyelembe kell venni a folyáshatárt, a keményedési tulajdonságokat és a törési viselkedést is.
-
-A modellek paramétereinek kalibrálása során kísérleti adatokra vagy megbízható szakirodalmi forrásokra támaszkodunk. A kalibrálás azt jelenti, hogy a szimulációs modellben használt paramétereket úgy állítjuk be, hogy azok a valós anyagviselkedést a lehető legjobban közelítsék. A validálás azt a folyamatot jelenti, hogy összehasonlítjuk a szimulációs eredményeket kísérleti adatokkal vagy más megbízható forrásból származó eredménnyel, ezzel bizonyítva a modell megbízhatóságát és pontosságát. Egy jól kalibrált és validált anyagmodell növeli a végeselem-analízis eredményeinek hitelességét, így biztosítva, hogy a szakítópofa tervezésekor kapott eredmények megbízhatóak legyenek \cite{tamas2014vegeselem}.
-
-\subsection{Kezdeti- és peremfeltételek}
-A perem- és kezdőfeltételek meghatározása kritikus lépés a végeselem-modellezésben, mivel ezek határozzák meg, hogy a modell hogyan viselkedik a terhelés alatt és milyen korlátok között mozoghat. Ezeket a feltételeket úgy választjuk meg, hogy azok pontosan tükrözzék a valós körülményeket.
-
-\noindent\textbf{Peremfeltételek: }
-A terhelési pontok meghatározása elengedhetetlen, mert ezek határozzák meg, hogy milyen erők és nyomatékok hatnak a szerkezetre. A rögzítési pontok vagy felületek megadása szintén fontos, mert ezek jelölik ki, hogy a szerkezet mely pontjainál van megakadályozva az elmozdulás, így modellezve a valós rögzítési viszonyokat. A peremfeltételek beállítása során ügyelni kell arra, hogy azok ne legyenek túl merevek vagy túl engedékenyek, mivel ez befolyásolhatja a szerkezeti válaszokat és az eredmények pontosságát.
-
-\noindent\textbf{Kezdőfeltételek: }
-Ezek a feltételek a vizsgált szerkezeti elem kezdeti állapotát írják le, mint például előfeszítést vagy kezdeti elmozdulásokat. A kezdőfeltételek meghatározásával a modellben szimulálhatjuk azokat a kezdeti viszonyokat, amelyek a terhelés megkezdése előtt állnak fenn \cite{mankovits2015modellezes}.
-
-\noindent\textbf{Dinamikai és nemlineáris hatások: }
-A valósághű modellezéshez fontos a dinamikai hatások, mint tömeg és inercia által okozott erők figyelembe vétele, különösen gyors terhelések vagy rezgések esetén. A nemlineáris jelenségek, mint nagy elmozdulások vagy anyagviselkedés, szintén lényegesek, különösen a rugalmassági határon túli terhelések esetén. Ezek a jellemzők jelentősen befolyásolják a szerkezet válaszát és az eredmények pontosságát, ezért fontosak a megbízható elemzéshez.
-
-\chapter{Probléma}
-
-\chapter{Tervezés}
-
-\chapter{Végeselem analízis}
-
-\chapter{Gyártás}
-
-\chapter{Összegzés}
+\chapter{Összefoglalás}
 
 
 
