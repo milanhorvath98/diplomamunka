@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2025.10.4)  4 OCT 2025 17:52
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2025.10.4)  4 OCT 2025 19:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1139,22 +1139,22 @@ Underfull \hbox (badness 1845) in paragraph at lines 21--22
 
 ]
 \c@romanPage=\count361
-) (./diplomamunka.toc)
+) (./diplomamunka.toc [7
+
+
+
+
+])
 \tf@toc=\write5
 \openout5 = `diplomamunka.toc'.
 
- [7
-
-
-
-
-]
+ [8]
 Underfull \hbox (badness 1342) in paragraph at lines 292--293
 \TU/lmr/m/it/12 valamint hogy támogatták a diplomamunkám minőségi elkészültét.
 Szeretném
  []
 
-[8
+[9
 
 ]
 Underfull \hbox (badness 1320) in paragraph at lines 308--313
@@ -1162,7 +1162,7 @@ Underfull \hbox (badness 1320) in paragraph at lines 308--313
 emzetközi
  []
 
-[9
+[10
 
 ]
 1. fejezet.
@@ -1170,21 +1170,24 @@ emzetközi
 
 
 ]
-2. fejezet.
-[2
+Overfull \vbox (260.87666pt too high) has occurred while \output is active []
 
-]
-3. fejezet.
+
+[2]
+2. fejezet.
 [3
 
 ]
-4. fejezet.
+3. fejezet.
 [4
 
 ]
-5. fejezet.
-No file diplomamunka.bbl.
+4. fejezet.
 [5
+
+]
+5. fejezet.
+[6
 
 ]
 *geometry* verbose mode - [ newgeometry ] result:
@@ -1219,7 +1222,7 @@ No file diplomamunka.bbl.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
- [6
+ [7
 
 ]
 
@@ -1229,22 +1232,22 @@ See the caption package documentation for explanation.
 \tf@thm=\write6
 \openout6 = `diplomamunka.thm'.
 
-[7] (./diplomamunka.aux (./titlepage-thesis.aux)
+[8] (./diplomamunka.aux (./titlepage-thesis.aux)
 (./copyrightpage-restricted.aux) (./declaration.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `diplomamunka.out' has not changed.
-(rerunfilecheck)             Checksum: F4BC293D31875271ACFBFEE0EDCBC824;991.
+(rerunfilecheck)             Checksum: 1859840BA5CC8FF647C0AC76C59E7553;5931.
  )
 Here is how much of TeX's memory you used:
- 31720 strings out of 476878
- 627943 string characters out of 5805249
- 1923627 words of memory out of 5000000
- 53096 multiletter control sequences out of 15000+600000
- 563186 words of font info for 69 fonts, out of 8000000 for 9000
+ 31733 strings out of 476878
+ 628215 string characters out of 5805249
+ 1926627 words of memory out of 5000000
+ 53106 multiletter control sequences out of 15000+600000
+ 563210 words of font info for 72 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 117i,10n,121p,1009b,372s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,10n,121p,1009b,541s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on diplomamunka.pdf (15 pages).
+Output written on diplomamunka.pdf (17 pages).
