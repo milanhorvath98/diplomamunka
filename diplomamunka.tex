@@ -1,0 +1,417 @@
+
+%--------------------------------------------------------------------------------------
+% Alapbeállítások
+%--------------------------------------------------------------------------------------
+\documentclass[12pt,a4paper,oneside]{report}
+\usepackage[magyar]{babel} % Language support
+\usepackage{geometry}
+\usepackage{amsfonts,amsmath,amssymb} % Mathematical symbols
+\usepackage{microtype} % Imrovements to typesetting
+\usepackage{setspace} % For setting line spacing
+\usepackage{cmap} % Enables more advenced text copying from the PDF document
+\usepackage{sectsty} % Section heading styling
+
+\usepackage{todonotes}
+
+%\usepackage[backend=biber, sorting=none]{biblatex} % sorting=none a hivatkozások sorrendjéhez
+%\addbibresource{mybib.bib} % A BibTeX adatbázisfájlod
+
+\usepackage[unicode]{hyperref} % For hyperlinks in the generated document
+\usepackage{booktabs} % For publication quality tables for LaTeX
+\usepackage{graphicx} % For figure sizing
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage[hang]{caption}
+\usepackage{xcolor} % For code coloring in listings
+\usepackage{listings} % For source code snippets
+\usepackage[amsmath,thmmarks]{ntheorem} % Theorem-like environments
+
+\usepackage[numbers]{natbib} % Bibliography
+
+%\usepackage[T1]{fontenc} %Betűtípus beállításhoz
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\usepackage{lipsum}
+\usepackage{tikz}
+\usepackage{pdfpages}
+%\usepackage{floatrow}
+
+\newcommand{\tss}{\textsuperscript}     % tss = felső index
+
+
+%--------------------------------------------------------------------------------------
+% Elnevezések
+%--------------------------------------------------------------------------------------
+\newcommand{\elte}{Eötvös Loránd Tudományegyetem}
+\newcommand{\ik}{Informatikai Kar}
+\newcommand{\smi}{Savaria Műszaki Intézet}
+
+\newcommand{\keszitette}{Horváth Milán}\newcommand{\konzulens}{Konzulens}
+\newcommand{\temavezeto}{Témavezető}
+\newcommand{\selectbsc}{
+  \newcommand{\munkatipus}{Diplomamunka}       % Dokumentum típusa
+  \newcommand{\munkatipusHU}{Diplomamunka}     % Dokumentum típusa
+  \newcommand{\munkatipusok}{Diplomamunkák}   % többesszámban
+  \newcommand{\munkatipustHU}{Diplomamunkát}  % tárgyraggal
+}
+\newcommand{\pelda}{Példa}
+\newcommand{\definicio}{Definíció}
+\newcommand{\tetel}{Tétel}
+\newcommand{\jelolesek}{Jelölések jegyzéke}
+\newcommand{\eloszo}{Előszó}
+\newcommand{\bevezetes}{Bevezetés}
+\newcommand{\koszonetnyilvanitas}{Köszönetnyilvánítás}
+\newcommand{\osszefoglalas}{Összefoglalás}
+\newcommand{\summary}{Summary}
+\newcommand{\fuggelek}{Függelék}
+\newcommand{\melleklet}{Mellékletek}
+\newcommand{\authorName}{\authorFamilyName{} \authorGivenName}
+\newcommand{\consulentA}{\consulentATitle\consulentAFamilyName{} \consulentAGivenName}
+\newcommand{\consulentB}{\consulentBTitle\consulentBFamilyName{} \consulentBGivenName}
+\newcommand{\consulentC}{\consulentCTitle\consulentCFamilyName{} \consulentCGivenName}
+\newcommand{\supervisor}{\supervisorTitle\supervisorFamilyName{}
+\supervisorGivenName}
+
+\newcommand{\selectthesislanguage}{\selecthungarian}
+\newcommand{\selectforeignlanguage}{\selectenglish}
+
+
+\def\lstlistingname{lista}
+
+\newcommand{\appendixletter}{6} % a fofejezet-szamlalo az angol ABC 6. betuje (F) lesz
+\newcommand{\annexletter}{13} % M betű
+
+%--------------------------------------------------------------------------------------
+% Oldal elrendezés
+%--------------------------------------------------------------------------------------
+\pagestyle{plain}
+\geometry{inner=35mm, outer=25mm, top=25mm, bottom=25mm}
+
+%--------------------------------------------------------------------------------------
+% Szöveg és bekezdés stílus
+%--------------------------------------------------------------------------------------
+\sectionfont{\Large\upshape\bfseries}  % Section title font
+\subsectionfont{\Large\itshape\mdseries}
+\subsubsectionfont{\large\itshape\mdseries}
+\setcounter{secnumdepth}{3}             % Section numbering depth
+
+\sloppy                                 % Prevent text from spilling over the margin
+\widowpenalty=10000 \clubpenalty=10000  % Prevent widow and oprhan rows
+\def\hyph{-\penalty0\hskip0pt\relax}    % Enable hyphenation
+
+\onehalfspacing                         % 1.5x Line spacing
+
+\newcommand{\selecthungarian}{
+	\selectlanguage{magyar}
+	\setlength{\parindent}{2em}			% Paragraph indentation
+	\setlength{\parskip}{5pt}			% Paragraph spacing
+	\frenchspacing
+}
+
+%--------------------------------------------------------------------------------------
+% hyperref package beállítás
+%--------------------------------------------------------------------------------------
+\hypersetup{
+    % bookmarks=true,            % show bookmarks bar?
+    unicode=true,                % non-Latin characters in Acrobat's bookmarks
+    pdfnewwindow=true,           % links in new window
+    colorlinks=true,             % false: boxed links; true: colored links
+    linkcolor=black,             % color of internal links
+    citecolor=black,             % color of links to bibliography
+    filecolor=black,             % color of file links
+    urlcolor=black               % color of external links
+}
+
+%--------------------------------------------------------------------------------------
+% Apply variables
+%--------------------------------------------------------------------------------------
+% This command is called in the main tex file and uses variables set there.
+\newcommand{\applyvariables}{
+	\author{\authorName}
+	\title{\thesisTitle}
+
+	\hypersetup{
+		pdftitle={\thesisTitle},     % title
+		pdfauthor={\authorName},     % author
+		pdfsubject={\munkatipus}, % subject of the document
+		pdfkeywords={\keywords},     % list of keywords (separate then by comma)
+		pdfproducer={\authorName},   % producer of the document (organization)
+		pdfcreator={LaTeX}           % creator of the document (application)
+	}
+}
+
+%--------------------------------------------------------------------------------------
+% Set up listings
+%--------------------------------------------------------------------------------------
+\definecolor{lightgray}{rgb}{0.95,0.95,0.95}
+\lstset{
+	basicstyle=\scriptsize\ttfamily, % print whole listing small
+	keywordstyle=\color{black}\bfseries, % bold black keywords
+	identifierstyle=, % nothing happens
+	% default behavior: comments in italic, to change use
+	% commentstyle=\color{green}, % for e.g. green comments
+	stringstyle=\scriptsize,
+	showstringspaces=false, % no special string spaces
+	aboveskip=3pt,
+	belowskip=3pt,
+	backgroundcolor=\color{lightgray},
+	columns=flexible,
+	keepspaces=true,
+	escapeinside={(*@}{@*)},
+	captionpos=b,
+	breaklines=true,
+	frame=single,
+	float=!ht,
+	tabsize=2,
+	literate=*
+		{á}{{\'a}}1	{é}{{\'e}}1	{í}{{\'i}}1	{ó}{{\'o}}1	{ö}{{\"o}}1	{ő}{{\H{o}}}1	{ú}{{\'u}}1	{ü}{{\"u}}1	{ű}{{\H{u}}}1
+		{Á}{{\'A}}1	{É}{{\'E}}1	{Í}{{\'I}}1	{Ó}{{\'O}}1	{Ö}{{\"O}}1	{Ő}{{\H{O}}}1	{Ú}{{\'U}}1	{Ü}{{\"U}}1	{Ű}{{\H{U}}}1
+}
+
+%--------------------------------------------------------------------------------------
+% Setup captions
+%--------------------------------------------------------------------------------------
+\captionsetup[figure]{
+	width=.75\textwidth,
+	aboveskip=10pt}
+
+\renewcommand{\captionlabelfont}{\it}
+\renewcommand{\captionfont}{\footnotesize\it}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\selectbsc
+%--------------------------------------------------------------------------------------
+% Változók beállítása [Setting variables]
+%--------------------------------------------------------------------------------------
+%TODO Állítsd be az alábbi változókat [Set these variables]%
+% Szerző [Author]
+\def\authorFamilyName{Horváth}
+\def\authorGivenName{Milán}
+\def\neptun{MYQGQ0}
+
+% Konzulens 1 [Consulent 1]
+\def\consulentATitle{}
+\def\consulentAFamilyName{Őri}
+\def\consulentAGivenName{Zsuzsanna}
+\def\consulentARank{termékfejlesztő}
+
+% Konzulens 2 [Consulent 2], ha nincs hagyd üresen
+\def\consulentBTitle{}
+\def\consulentBFamilyName{Kiss}
+\def\consulentBGivenName{Henrik}
+\def\consulentBRank{műszaki oktató}
+
+% Konzulens 3 [Consulent 3], ha nincs hagyd üresen
+\def\consulentCTitle{}
+\def\consulentCFamilyName{}
+\def\consulentCGivenName{}
+\def\consulentCRank{}
+
+% Témavezető
+\def\supervisorTitle{}
+\def\supervisorFamilyName{Bátorfi}
+\def\supervisorGivenName{János György}
+\def\supervisorRank{egyetemi tanársegéd}
+
+% Dolgozat címe [Thesis title]
+\def\thesisTitle{Diplomamunka}
+
+% Kulcsszavak (a PDF-be) [Keywords (to PDF)]
+\def\keywords{mechatronika, szabályozástechnika, etorobotika, ipar 4.0}
+
+% Tanszék [Department]
+\def\department{\smi}
+
+% Elzártan kezelendő dolgozat [Restricted access]
+%TODO Töltsd ki a korlátozás lejártának dátumát!
+\def\endOfRestrictedAccess{2034 január 31. nap}
+
+% Változók beállítása a PDF fájlhoz [Apply variables for the PDF file]
+\applyvariables
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%--------------------------------------------------------------------------------------
+% Dokumentum törzse [Document body]
+%--------------------------------------------------------------------------------------
+\onehalfspacing
+\begin{document}
+
+\pagenumbering{gobble}
+\selectthesislanguage
+
+% Címoldal [Titlepage]
+\include{titlepage-thesis}  % Diplomamunka címlap [Thesis]
+
+% Copytightoldal [Copyright page]
+%TODO Válaszd ki a megfelelőt! [Choose one]
+%\include{copyrightpage}               % Nyílt kezelésű [Open access]
+\include{copyrightpage-restricted}   % Elzárt kezelésű [Restricted access]
+
+% Feladatkiírás [Project page]
+%TODO A nyomtatott verzóban ne szerepeljen! [Remove before printing]
+%\include{chapters/project}
+
+% Nyilatkozatok [Declarations]
+\include{declaration}
+
+\selectthesislanguage
+% Tartalomjegyzék [Table of Contents]
+\setcounter{tocdepth}{3}  % Tartalomjegyzék mélysége [ToC depth]
+\tableofcontents\vfill
+
+% Ábrák és táblázatok jegyzéke [List of Figures, Tables]
+%TODO Kommenteld ki, ha használni szeretnéd. [Uncomment to use]
+%\listoffigures\addcontentsline{toc}{chapter}{\listfigurename}   % Ábrák jegyzéke - opcionális
+%\listoftables\addcontentsline{toc}{chapter}{\listtablename}     % Táblázatok jegyzéke - opcionális
+
+\chapter*{Előszó}\addcontentsline{toc}{chapter}{\eloszo}
+Már a középiskolás éveim során érdeklődtem a 3D tervezés, a CAD-CAM világa felé. Gépi forgácsoló szakmámból kifolyólag elég régóta kürölvesz engem a gépészeti világ és akkor jött a gondolat, mi lenne ha jelentkeznék egyetemre. Életem egyik legjobb döntése volt a gépészmérnöki képzés elkezdése. Rengeteg új információval gazdagodtam, sokkal jobban el tudtam mélyülni a CAD-CAM rendszerekben, valamint megismerkedtem számomra addig teljesen ismeretlen módszerekkel. Az egyik ilyen volt a végeselem analízis. Ez a terület tetszett meg a legjobban a képzés során, rengeteg lehetőség rejlik benne. A diplomamunka téma kiválasztásánál számomra fontos volt, hogy a CAD-CAM, valamint a végeselem analízis szerepet kapjanak az elkészítés során.
+
+
+\begin{center}
+    $\thicksim \; \thicksim \; \thicksim$
+\end{center}
+
+
+\subsubsection*{Köszönetnyilvánítás}
+\emph{Elsőként szeretném megköszönni a TDK Hungary Components Kft.-nek, hogy a gépészmérnöki képzésem alatt biztosítottak számomra duális gyakorlati helyet, valamint hogy támogatták a diplomamunkám minőségi elkészültét. Szeretném megköszönni az Eurosolid Zrt.-nek, hogy biztosították számomra a Soldiworks 2022 Student Edition CAD szoftvert, amellyel a modelleket készítettem el.}
+
+\vspace{0.5cm}
+
+\begin{flushleft}
+{Szombathely, \today}
+\end{flushleft}
+
+\begin{flushright}
+\emph{\authorName}
+\end{flushright}
+\vfill
+
+\chapter*{Jelölések}\addcontentsline{toc}{chapter}{\jelolesek}
+%----------------------------------------------------------------------------
+
+A táblázatban a többször előforduló jelölések magyar és angol nyelvű elnevezése,
+valamint a fizikai mennyiségek esetén annak mértékegysége található. Az egyes
+mennyiségek jelölése – ahol lehetséges – megegyezik hazai és a nemzetközi
+szakirodalomban elfogadott jelölésekkel. A ritkán alkalmazott jelölések
+magyarázata első előfordulási helyüknél található.
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% A táblázatokat ABC rendben kell feltölteni, először mindig a kisbetűvel
+% kezdve. Ha egyazon betűjelnek több értelmezése is van, akkor mindegyiket kü-
+% lön sorban kell feltüntetni. Konstansok esetén az értéket is a táblázatba
+% kell írni.
+% Dimenzió nélküli mennyiségek mértékegysége 1 és nem: – !
+% A jelölésjegyzékben csak SI vagy SI-n kívüli engedélyezett mértékegységeket
+% szabad feltüntetni. Egy dokumentumon belül az SI és pl. az angolszász
+% mértékrendszer nem keverhető!
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% A Jelölés oszlop alapvetően kurzív betűváltozattal szedendő, a Mértékegység
+% oszlopot álló betűkkel kell szedni. Felső indexhez használható a \tss{}
+% parancs.
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\def\arraystretch{1.5}%  vertical cell padding
+
+\subsubsection*{Latin betűk}
+\begin{center}
+    \begin{tabular}{lp{10cm}l}
+        \hline
+        Jelölés & Megnevezés, megjegyzés, érték & Mértékegység \\
+        \hline
+        $E$     & Rugalmassági modulusz  & GPa     \\
+        $F$     & erő                        & N           \\
+        $S$     & keresztmetszet             & mm\tss{2} \\
+        \hline
+    \end{tabular}
+\end{center}
+
+
+
+\subsubsection*{Görög betűk}
+\begin{center}
+    \begin{tabular}{lp{10cm}l}
+        \hline
+        Jelölés & Megnevezés, megjegyzés, érték & Mértékegység \\
+        \hline
+                $\varepsilon$  & alakváltozás           & 1    \\
+        $\sigma$  & feszültség                  & MPa             \\
+
+        \hline
+    \end{tabular}
+\end{center}
+
+
+
+\subsubsection*{Indexek, kitevők}
+\begin{center}
+    \begin{tabular}{lp{12.8cm}}
+        \hline
+        Jelölés & Megnevezés, értelmezés\\
+        \hline
+        $e$     & elem  \\
+        max     & maximális érték        \\
+        \hline
+    \end{tabular}
+\end{center}
+
+
+\def\arraystretch{1}%  vertical cell padding
+
+% Főszöveg [The main part of the thesis]
+\cleardoublepage
+\pagenumbering{arabic}
+\chapter{Irodalmi áttekintés}
+
+\chapter{Anyagok és módszerek}
+
+\chapter{Szerszámkialakítás}
+
+\chapter{Mérési eredmények értékelése}
+
+\chapter{Összegzés}
+
+
+
+\footnotesize  % Kisebb betűméret [Smaller font size]
+\bibliographystyle{unsrtnat}
+\bibliography{bib/mybib}
+\newpage
+%\printbibliography
+
+% Függelék és mellékletek [Appendices]
+\appendix
+\newgeometry{inner=20mm, top=10mm, bottom=20mm, outer=25mm}
+% Melléklet A
+\begin{center}
+    \Large\textbf{Melléklet A}
+\end{center}
+%\includepdf[pages=1, scale=0.9]{Szakítópofa_új.pdf}
+\newpage
+
+% Melléklet B
+\begin{center}
+    \Large\textbf{Melléklet B}
+\end{center}
+%\excludeFromLocAndLot % A következő ábrákat és a táblázatokat hagyja ki a jegyzékből
+                      % [Exclude following figures and tables from List Of Figures/Tables]
+
+
+\end{document}
