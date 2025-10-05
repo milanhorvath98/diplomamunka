@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2025.10.5)  5 OCT 2025 18:11
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2025.10.5)  5 OCT 2025 18:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -850,6 +850,27 @@ X
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+
+Package fontspec Info: Font family 'TimesNewRoman(0)' created for font 'Times
+(fontspec)             New Roman' with options [Ligatures=TeX].
+(fontspec)
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Times New
+(fontspec)             Roman/OT:language=dflt;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Times New
+(fontspec)             Roman/B/OT:language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"Times New
+(fontspec)             Roman/I/OT:language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Times New
+(fontspec)             Roman/BI/OT:language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+
+
 (/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
 (/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
 Package: l3keys2e 2023-10-10 LaTeX2e option processing using LaTeX3 keys
@@ -977,10 +998,10 @@ Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of spacing.
 Package microtype Info: No adjustment of kerning.
-(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg
-File: mt-LatinModernRoman.cfg 2021/02/21 v1.1 microtype config. file: Latin Mod
-ern Roman (RS)
-)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `TimesNewRoman' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
 
 Package todonotes Warning: The length marginparwidth is less than 2cm and will
 most likely cause issues with the appearance of inserted todonotes. The issue c
@@ -1030,25 +1051,32 @@ LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
 (Font)              `operators' in the math version `normal' on input line 252.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 252.
+(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(0)/m/n on input line 2
+52.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
 (Font)              `operators' in the math version `bold' on input line 252.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 252.
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/m/n on input line
+252.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 252.
+(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/m/n on
+input line 252.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 252.
+(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(0)/m/it on input line
+ 252.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 252.
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/b/n on input line
+252.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
 (Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 252.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
 (Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 252.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 252.
+(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/b/n on
+input line 252.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 252.
+(Font)                  OT1/cmr/bx/it --> TU/TimesNewRoman(0)/b/it on input lin
+e 252.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 252.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
@@ -1091,8 +1119,11 @@ File: figures/smi.png Graphic file (type bmp)
  [2
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 52.
 
+LaTeX Font Warning: Font shape `TU/TimesNewRoman(0)/m/sc' undefined
+(Font)              using `TU/TimesNewRoman(0)/m/n' instead on input line 44.
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 52.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1118,7 +1149,13 @@ Package hyperref Info: Option `pageanchor' set `false' on input line 71.
 \openout2 = `copyrightpage-restricted.aux'.
 
 
-(./copyrightpage-restricted.tex [1
+(./copyrightpage-restricted.tex
+Underfull \hbox (badness 1577) in paragraph at lines 18--20
+\TU/TimesNewRoman(0)/m/n/12 szerint korlátozott, a diplomamunka tartalmát csak
+az arra feljogosított személyek
+ []
+
+[1
 
 
 
@@ -1146,9 +1183,27 @@ File: feladatkiiras.pdf Graphic file (type pdf)
 \openout2 = `declaration.aux'.
 
  (./declaration.tex
-Underfull \hbox (badness 1845) in paragraph at lines 21--22
-\TU/lmr/m/n/12 Alulírott, \TU/lmr/m/it/12 Horváth Milán \TU/lmr/m/n/12 (MYQGQ0)
-, az Eötvös Loránd Tudományegyetem
+Underfull \hbox (badness 1009) in paragraph at lines 21--22
+\TU/TimesNewRoman(0)/m/n/12 átvettem, egyértelműen, a hatályos előírásoknak meg
+felelően, a forrás megadásával
+ []
+
+
+Underfull \hbox (badness 1694) in paragraph at lines 23--24
+\TU/TimesNewRoman(0)/m/n/12 alkotás jogtisztaság szempontjából megfelel az „Eöt
+vös Loránd Tudományegyetem
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+\TU/TimesNewRoman(0)/m/n/12 Szervezeti és Működési Szabályzata, II. kötet, Hall
+gatói Követelményrendszer.
+ []
+
+
+Underfull \hbox (badness 7433) in paragraph at lines 23--24
+\TU/TimesNewRoman(0)/m/n/12 Módosításokkal egybeszerkesztett változat [2017. sz
+eptember 1.]” c. szabályzat
  []
 
 [6
@@ -1166,20 +1221,14 @@ Underfull \hbox (badness 1845) in paragraph at lines 21--22
 \openout5 = `diplomamunka.toc'.
 
  [8]
-Underfull \hbox (badness 1342) in paragraph at lines 292--293
-\TU/lmr/m/it/12 valamint hogy támogatták a diplomamunkám minőségi elkészültét.
-Szeretném
+Underfull \hbox (badness 4024) in paragraph at lines 292--293
+\TU/TimesNewRoman(0)/m/it/12 Elsőként szeretném megköszönni a TDK Hungary Compo
+nents Kft.-nek, hogy a
  []
 
 [9
 
-]
-Underfull \hbox (badness 1320) in paragraph at lines 308--313
-\TU/lmr/m/n/12 mennyiségek jelölése – ahol lehetséges – megegyezik hazai és a n
-emzetközi
- []
-
-[10
+] [10
 
 ]
 1. fejezet.
@@ -1187,7 +1236,7 @@ emzetközi
 
 
 ]
-Overfull \vbox (260.87666pt too high) has occurred while \output is active []
+Overfull \vbox (267.7715pt too high) has occurred while \output is active []
 
 
 [2]
@@ -1255,15 +1304,19 @@ See the caption package documentation for explanation.
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
 Package rerunfilecheck Info: File `diplomamunka.out' has not changed.
 (rerunfilecheck)             Checksum: 1859840BA5CC8FF647C0AC76C59E7553;5931.
  )
 Here is how much of TeX's memory you used:
- 31745 strings out of 476878
- 628518 string characters out of 5805249
+ 31736 strings out of 476878
+ 628439 string characters out of 5805249
  1926627 words of memory out of 5000000
- 53116 multiletter control sequences out of 15000+600000
- 563210 words of font info for 72 fonts, out of 8000000 for 9000
+ 53111 multiletter control sequences out of 15000+600000
+ 563298 words of font info for 83 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  117i,17n,121p,1009b,541s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
