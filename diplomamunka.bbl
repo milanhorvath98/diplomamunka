@@ -1,0 +1,105 @@
+\begin{thebibliography}{14}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Gillemot and Ziaja(1977)]{Gillemot1977}
+L.~Gillemot and Gy. Ziaja.
+\newblock \emph{Fémek képlékeny alakítása}.
+\newblock Tankönyvkiadó, Budapest, 1977.
+
+\bibitem[Pereira et~al.(2024)Pereira, Peixinho, and Costa]{Pereira2024}
+R.~Pereira, N.~Peixinho, and S.~L. Costa.
+\newblock A review of sheet metal forming evaluation of advanced high-strength
+  steels (ahss).
+\newblock \emph{Metals}, 14\penalty0 (4):\penalty0 394, 2024.
+\newblock \doi{10.3390/met14040394}.
+
+\bibitem[Marciniak et~al.(2002)Marciniak, Duncan, and Hu]{Marciniak2002}
+Z.~Marciniak, J.~L. Duncan, and S.~J. Hu.
+\newblock \emph{Mechanics of sheet metal forming}.
+\newblock Butterworth-Heinemann, 2002.
+
+\bibitem[Takalkar and Babu(2019)]{Takalkar2019}
+A.~S. Takalkar and M.~C.~L. Babu.
+\newblock A review on effect of thinning, wrinkling and spring-back on deep
+  drawing process.
+\newblock \emph{Proceedings of the Institution of Mechanical Engineers, Part B:
+  Journal of Engineering Manufacture}, 233\penalty0 (6):\penalty0 1011--1036,
+  2019.
+\newblock \doi{10.1177/0954405417752509}.
+
+\bibitem[Savoie et~al.(1996)Savoie, Zhou, Jonas, and MacEwen]{Savoie1996}
+J.~Savoie, Y.~Zhou, J.~J. Jonas, and S.~R. MacEwen.
+\newblock Textures induced by tension and deep drawing in aluminum sheets.
+\newblock \emph{Acta Materialia}, 44\penalty0 (2):\penalty0 587--598, 1996.
+\newblock \doi{10.1016/1359-6454(95)00214-6}.
+
+\bibitem[Raabe et~al.(2005)Raabe, Wang, and Roters]{Raabe2005}
+D.~Raabe, Y.~Wang, and F.~Roters.
+\newblock Crystal plasticity simulation study on the influence of texture on
+  earing in steel.
+\newblock \emph{Computational Materials Science}, 34\penalty0 (3):\penalty0
+  221--234, 2005.
+\newblock \doi{10.1016/j.commatsci.2004.12.072}.
+
+\bibitem[Engler(2025)]{Engler2025}
+O.~Engler.
+\newblock Correlating crystallographic texture with anisotropic properties and
+  sheet metal forming of aluminium alloys.
+\newblock \emph{Journal of Materials Research and Technology}, 35:\penalty0
+  514--522, 2025.
+\newblock \doi{10.1016/j.jmrt.2025.01.059}.
+
+\bibitem[Lankford et~al.(1950)Lankford, Snyder, and Bauscher]{Lankford1950}
+W.~T. Lankford, S.~C. Snyder, and J.~A. Bauscher.
+\newblock New criteria for predicting the press performance of deep drawing
+  sheets.
+\newblock \emph{Transactions of the ASM}, 42:\penalty0 1197--1232, 1950.
+
+\bibitem[Wu et~al.(2023)Wu, Hong, Zhang, Huang, and Huang]{Wu2023}
+F.~Wu, Y.~Hong, Z.~Zhang, C.~Huang, and Z.~Huang.
+\newblock Effect of lankford coefficients on springback behavior during deep
+  drawing of stainless steel cylinders.
+\newblock \emph{Materials}, 16\penalty0 (12):\penalty0 4321, 2023.
+\newblock \doi{10.3390/ma16124321}.
+
+\bibitem[Tang et~al.(2018)Tang, Guo, Liu, and Chen]{Tang2018}
+B.~Tang, N.~Guo, Z.~Y. Liu, and Z.~Y. Chen.
+\newblock Planar anisotropy, tension–compression asymmetry, and deep drawing
+  behavior of commercially pure titanium at room temperature.
+\newblock \emph{Journal of Materials Engineering and Performance}, 27\penalty0
+  (11):\penalty0 6073--6082, 2018.
+\newblock \doi{10.1007/s11665-018-3646-6}.
+
+\bibitem[Weltsch(2019)]{Weltsch2019}
+Z.~Weltsch.
+\newblock \emph{Képlékeny alakítás a járműiparban}.
+\newblock Akadémiai Kiadó, Budapest, 2019.
+
+\bibitem[Luo et~al.(2021)Luo, Wei, Zu, and Jiang]{Luo2021}
+L.~Luo, D.~Wei, G.~Zu, and Z.~Jiang.
+\newblock Influence of blank holder-die gap on micro-deep drawing of sus304
+  cups.
+\newblock \emph{International Journal of Mechanical Sciences}, 191:\penalty0
+  106065, 2021.
+\newblock \doi{10.1016/j.ijmecsci.2020.106065}.
+
+\bibitem[Mu et~al.(2022)Mu, Zhao, Meng, Huang, and Yu]{Mu2022}
+Z.~Mu, J.~Zhao, Q.~Meng, X.~Huang, and G.~Yu.
+\newblock Applicability of hill48 yield model and effect of anisotropic
+  parameter determination methods on anisotropic prediction.
+\newblock \emph{Journal of Materials Engineering and Performance}, 31\penalty0
+  (3):\penalty0 2023--2042, 2022.
+\newblock \doi{10.1007/s11665-021-06366-z}.
+
+\bibitem[Barlat et~al.(2003)]{Barlat2003}
+F.~Barlat et~al.
+\newblock Plane stress yield function for aluminum alloy sheets—part i:
+  theory.
+\newblock \emph{International Journal of Plasticity}, 19\penalty0 (9):\penalty0
+  1297--1319, 2003.
+
+\end{thebibliography}

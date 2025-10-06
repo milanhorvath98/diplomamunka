@@ -31,7 +31,7 @@
 %\usepackage[T1]{fontenc} %Betűtípus beállításhoz
 
 \usepackage{fontspec}
-\setmainfont{Times New Roman}
+\setmainfont{Liberation Serif}
 \usepackage{lipsum}
 \usepackage{tikz}
 \usepackage{pdfpages}
@@ -392,31 +392,179 @@ Jelen irodalmi áttekintés célja, hogy átfogó képet nyújtson a mélyhúzá
 
 \section{Képlékeny alakítás elméleti alapjai}
 \subsection{Rugalmas és képlékeny alakváltozás}
+
+A képlékeny alakítás olyan technológiai folyamatok összessége, amelyek során a fém vagy ötvözet munkadarabot külső mechanikai erőhatással, maradandó (képlékeny) alakváltozás révén alakítjuk át kívánt formára, miközben az anyag térfogata és tömege változatlan marad \cite{Gillemot1977}. A folyamat alapja az anyag képlékeny viselkedése: a ráhatáskor fellépő feszültség túllépi a folyáshatárt, így az anyag a tehermentesítést követően sem tér vissza eredeti alakjára.
+
+Az alakítási folyamatok a hőmérséklettől függően két alapvető csoportra oszthatók, amelyek különböző mikroszerkezeti folyamatokat és technológiai jellemzőket eredményeznek.
+
+\subsubsection*{Hidegalakítás}
+Hidegalakítás ($T < 0,3T_m$, ahol $T_m$ az olvadáspont Kelvinben): A szobahőmérsékleten vagy közel ahhoz végzett alakítás során az anyag képlékenyen deformálódik, de az alakváltozás mechanizmusai (diszlokációs mozgás, csúszás) nem járnak újrakristályosodással. A hidegalakítás jellemzői:
+\begin{itemize}
+    \item Kiváló méretpontosság (IT12-IT14 tolerancia)
+    \item Jó felületi minőség
+    \item Növekedő szilárdság és keménység (alakítási keményedés)
+    \item Csökkenő képlékenység
+    \item Textúra kialakulása és stabilizálódása
+    \item Maradó feszültségek jelenléte
+\end{itemize}
+Acéllemezeknél a szobahőmérsékletű alakítás uralkodó a járműipari alkalmazásokban, ahol a dimenzionális stabilitás és a felületi minőség kritikus követelmény. Az alumíniumötvözetek szintén kiválóan hidegalakíthatók az FCC kristályszerkezetből adódó jó szobahőmérsékletű képlékenységük miatt.
+
+\subsubsection*{Melegalakítás}
+Melegalakítás ($T > 0,5-0,6T_m$): Magasabb hőmérsékleten végzett alakítás során a képlékeny deformáció egyidejűleg zajlik a dinamikus újrakristályosodással vagy dinamikus recovery folyamatokkal, ami friss, deformálatlan szemcsestruktúrát eredményez. A melegalakítás előnyei:
+\begin{itemize}
+    \item Jelentősen csökkentett alakítóerők
+    \item Nagy alakváltozások elérhetősége egyetlen lépésben
+    \item Kedvező mechanikai tulajdonságok finomabb szemcseszerkezet miatt
+    \item Belső feszültségek csökkenése
+    \item Nehezen alakítható anyagok megmunkálhatósága
+\end{itemize}
+Hátrányok közé tartozik a nagyobb energiaráfordítás, oxidációs és lekéregesedési problémák, valamint rosszabb méretpontosság és felületi minőség. A járműiparban alkalmazott korszerű nagyszilárdságú acélok (AHSS – Advanced High-Strength Steels) melegelakítása speciális keményítési eljárásokat (press hardening, hot stamping) tesz lehetővé, amelyek során a melegelakítást azonnal hűtéssel kombinálják \cite{Pereira2024}.
+
 \subsection{Feszültség-alakváltozás kapcsolata, szakítódiagram}
+Az alakíthatóság az anyag azon képessége, hogy törés nélkül mekkora mértékű képlékeny alakváltozást képes elviselni adott alakítási körülmények között. Az alakíthatóságot számos tényező befolyásolja:
+\begin{itemize}
+    \item \textbf{Anyagi tényezők:} Kristályszerkezet (FCC anyagok általában jobb alakíthatóságúak, mint BCC anyagok szobahőmérsékleten), kémiai összetétel és ötvözőelemek, mikroszerkezet (szemcseméret, fázisösszetétel), textúra (preferált kristályorientáció), előzetes alakváltozási történet (hideghengerlés mértéke).
+    \item \textbf{Technológiai tényezők:} Alakítási hőmérséklet, alakváltozási sebesség, feszültségállapot (egytengelyű, síkbeli, háromtengelyű), súrlódási viszonyok, szerszámgeometria.
+\end{itemize}
+Az alakíthatóság jellemzésére több kísérleti módszer és kritérium létezik. A legismertebb az egytengelyű szakítóvizsgálatból származó szakadási nyúlás ($A_{50}$ vagy $A_{80}$), amely azonban csak közelítő képet ad a komplex alakítási folyamatok során várható viselkedésről.
+
+Lemezalakítás esetében a Forming Limit Diagram (FLD) az iparban széles körben alkalmazott eszköz, amely a főalakváltozások síkjában ábrázolja azt a határgörbét, amely elválasztja a biztonságos alakítási tartományt a nyakképződési/szakadási zónától. Az FLD hagyományos formája Keeler és Backofen (1963) kutatásaiból származik, és számos szabványosított mérésen alapul (Nakazima-teszt, Marciniak-teszt, hidraulikus domborítási teszt) \cite{Marciniak2002}.
+
+\cite{Takalkar2019} átfogó áttekintésükben rámutattak, hogy a hagyományos FLD nem képes előrejelezni a nyírási törésmódokat és az élrepedéseket, amelyek különösen az AHSS acélok esetében jelentenek problémát. Ennek következtében fejlettebb károsodásmodellek kerültek kifejlesztésre (MMC – Modified Mohr-Coulomb, eMMC – extended MMC, GISSMO – Generalized Incremental Stress State dependent damage MOdel), amelyek figyelembe veszik a feszültségi triaxialitást és a Lode-paraméter hatását a törési mechanizmusokra.
 
 \section{Mikroszerkezettől a tervezésig}
+Az anizotrópia azt jelenti, hogy az anyag mechanikai tulajdonságai különböző irányokban eltérők. Fémlemezeknél az anizotrópia elsődleges oka a kristályos textúra, azaz a preferált szemcseorientációk kialakulása a gyártási folyamat (hengerlés és hőkezelés) során.
+
+\subsection{Kristályszerkezet és csúszórendszerek}
+A kristályszerkezet alapvetően meghatározza a rendelkezésre álló csúszórendszerek számát és orientációját, ami döntően befolyásolja a képlékeny anizotrópiát és az alakíthatóságot.
+
+\subsubsection*{FCC (face-centered cubic) fémek}
+Az FCC szerkezetű fémek (alumínium, réz, ausztenites acél, nikkel) 12 oktaéderikus csúszórendszerrel rendelkeznek: \{111\}<110> típusú síkok és irányok. A 12 független csúszórendszer nagy szabadságot biztosít a képlékeny alakváltozáshoz, ami általában jó szobahőmérsékletű képlékenységet eredményez. Az FCC fémek gömbös illeszkedése (atomic packing factor = 0,74) és a csúszósíkok nagy sűrűsége kedvező alakíthatóságot biztosít. Az FCC anyagok hengerelése során jellemző textúrakomponensek alakulnak ki: Brass \{112\}<111>, Copper \{112\}<111>, S \{123\}<634>. Újrakristályosodás után megjelenik a Cube \{001\}<100> orientáció, amely közepes r-értékeket (r≈0,5-1,0) eredményez. \cite{Savoie1996} alumíniumlemezek vizsgálata kimutatta, hogy 20-30\% húzás után a textúra <111> és <100> szálas textúrák felé fejlődik, ami jelentősen módosítja a lokális alakíthatóságot.
+
+\subsubsection*{BCC (body-centered cubic) fémek}
+A BCC szerkezetű fémek (ferrites acél, alacsony karbontartalmú acél) elsődlegesen \{110\}<111> és \{112\}<111> rendszereken csúsznak, összesen 24-48 potenciális rendszerrel. A BCC szerkezet kisebb atomi illeszkedési faktora (0,68) és a csúszósíkok nagyobb Peierls-feszültsége miatt szobahőmérsékleten általában alacsonyabb képlékenységet mutat, mint az FCC fémek. A BCC anyagoknál az $\alpha$-szálas (\{001\}<110> → \{112\}<110>) és $\gamma$-szálas (\{111\}<110>, \{111\}<112>) textúrakomponensek kritikusak. \cite{Raabe2005} kristályplaszticitás-szimulációi bizonyították, hogy 8, 6 vagy 4 fül alakul ki a kezdeti BCC textúrától függően, és a textúra élessége közvetlenül korrelál a fülprofil élességével. A $\gamma$-szálas komponensek (\{111\}<uvw>) magas r-értékeket (r=1,5-3,0) biztosítanak, ami kiváló alakíthatóságot eredményez.
+
+\subsection{Textúra-fejlődés az alakítás során}
+A textúra nem statikus jellemző, hanem útfüggő módon fejlődik az alakítási folyamat során. \cite{Engler2025} átfogó tanulmánya szerint a textúra útfüggő módon fejlődik: a peremrégióban (síkbeli alakváltozás) P \{011\}<111> és Goss \{011\}<100> orientációk erősödnek a korai szakaszban, míg a falrégióban (egytengelyű húzás) $\alpha$D-szálas komponensek dominálnak. Ez lokális alakíthatósági különbségeket eredményez ugyanazon alkatrészen belül.
 
 \section{Lemezek képlékeny anizotrópiája}
 \subsection{Az anizotrópia}
+Az anizotrópia azt jelenti, hogy az anyag mechanikai tulajdonságai különböző irányokban eltérők. Fémlemezeknél az anizotrópia elsődleges oka a kristályos textúra, azaz a preferált szemcseorientációk kialakulása a gyártási folyamat (hengerlés és hőkezelés) során. A hengerelési folyamat során nagy nyíró- és nyomó-alakváltozások érik a fémlemezt. Az egyes szemcsék nem homogén módon deformálódnak, mivel kristályorientációjuktól függően különböző csúszórendszerek aktiválódnak. A kedvezőbb orientációjú szemcsék gyorsabban alakulnak, míg mások lassabban, és ez egy preferált orientációeloszlást, azaz textúrát eredményez.
+
+Az anizotrópia típusai:
+\begin{itemize}
+    \item \textbf{Normál anizotrópia (plastic strain ratio anisotropy):} Az r-érték irányfüggősége, amely a vastagságirányú alakváltozás ellenállását jellemzi. Minél nagyobb az $\bar{r}$ (átlagos r-érték), annál jobban ellenáll az anyag a vastagságcsökkenésnek, ezáltal jobb mélyhúzhatóságot mutat.
+    \item \textbf{Síkbeli anizotrópia (planar anisotropy):} A különböző irányokban mért r-értékek közötti eltérés, $\Delta r = (r_0 - 2r_{45} + r_{90})/2$ képlettel számítva. Ez közvetlenül felelős a fülképződésért: $\Delta r>0$ esetén fülek alakulnak ki 0° és 90°-nál, $\Delta r<0$ esetén $\pm$45°-nál.
+    \item \textbf{Folyáshatár-anizotrópia (yield strength anisotropy):} Különböző irányokban eltérő folyáshatár értékek. Ez befolyásolja az anyagáramlást és az erőeloszlást a szerszámban.
+\end{itemize}
+
 \subsection{Lankford-tényező}
+A Lankford-paraméter, vagy r-érték, az anizotrópia legfontosabb mennyiségi jellemzője, amelyet William T. Lankford vezetett be 1950-ben \cite{Lankford1950}. Az r-érték az egytengelyű húzóvizsgálat során mért szélességi és vastagsági valódi képlékeny alakváltozások arányaként definiált:
+$r = \varepsilon_{width} / \varepsilon_{thickness} = \ln(w/w_0) / \ln(t/t_0)$
+ahol w és w₀ a pillanatnyi és kezdeti szélesség, t és t₀ a pillanatnyi és kezdeti vastagság. Az r>1 azt jelenti, hogy az anyag inkább szélességében, mint vastagságában alakul képlékenyen, ami előnyös mélyhúzásnál.
+Az átlagos r-érték (normál anizotrópia): $\bar{r} = (r_0 + 2r_{45} + r_{90}) / 4$.
+A síkanizotrópia (planar anisotropy): $\Delta r = (r_0 - 2r_{45} + r_{90}) / 2$.
+\cite{Wu2023} kísérleti vizsgálata rozsdamentes acél hengereken kimutatta, hogy az $r_{90}$ a legnagyobb hatással van az aljzati visszarugózásra (29-48\% hozzájárulás), míg $r_{45}$ és $r_0$ másodlagos jelentőségűek.
+
 \subsection{Csúcsosodás, az anizotrópia közvetlen hatása}
+Fülképződés (earing): Az anyag síkbeli anizotrópiája ($\Delta r \neq 0$) miatt a mélyhúzott pohár szélén periodikus magasság-ingadozások alakulnak ki. A fülek száma és elhelyezkedése közvetlenül függ a kristályos textúrától:
+\begin{itemize}
+    \item 4 fül: Tipikus alumíniumötvözeteknél kockatextúra dominanciája esetén, 0°, 45°, 90°, 135° helyeken.
+    \item 6 fül: Jellemző mélyhúzó acéloknál $\gamma$-szálas textúra esetén.
+    \item 8 fül: Összetett textúra esetén, vegyes orientációs komponensekkel.
+\end{itemize}
+\cite{Tang2018} kereskedelmi tisztaságú titán vizsgálatakor 13,7\%-os fülmagasságot mért $\Delta r \neq 0$ esetén. A fülképződés csökkenthető optimalizált terítékalak alkalmazásával, amely figyelembe veszi az anizotróp viselkedést.
+
 \subsection{Ideális mélyhúzható lemez}
+Az optimális mélyhúzhatóság magas átlagos r-értéket ($\bar{r} \uparrow$) és a nullához közeli síkbeli anizotrópiát ($\Delta r \to 0$) igényel. A magas $\bar{r}$ érték biztosítja az elvékonyodással szembeni nagy ellenállást, míg az alacsony $\Delta r$ érték megakadályozza a fülképződést és az ezzel járó anyagveszteséget.
 
 \section{A mélyhúzás technológiája}
 \subsection{A mélyhúzás alapelvei, fázisai}
+A mélyhúzás olyan lemezmegmunkálási eljárás, amelynek során síklemezt (tárcsalemezt, terítéket) bélyeg segítségével húzógyűrűn keresztül húzunk át, miközben a lemez radiális húzó- és tangenciális nyomófeszültség hatására üreges, általában forgásszimmetrikus vagy egyéb alakú alkatrésszé formálódik \cite{Gillemot1977, Weltsch2019}.
+A mélyhúzás során három fő deformációs zóna különíthető el:
+\begin{itemize}
+    \item \textbf{Bélyeg alatti zóna (aljzat):} Itt az anyag viszonylag kis alakváltozást szenved, elsősorban hajlítási és egyenesítési cikluson megy keresztül a bélyegsugárnál.
+    \item \textbf{Sugár-régiók (bélyegsugár és húzógyűrű-sugár):} Ezek a legkritikusabb zónák a legnagyobb von Mises feszültség szempontjából.
+    \item \textbf{Peremzóna (flange):} A húzógyűrű és a peremtartó közötti terület, ahol az anyag radiális húzó- és tangenciális (kerületi) nyomófeszültségnek van kitéve.
+\end{itemize}
+
 \subsection{Meghatározó technológiai paraméterek}
+\begin{itemize}
+    \item \textbf{Határalakítási arány (LDR – Limiting Drawing Ratio):} A legnagyobb sikeresen mélyhúzható teríték átmérőjének ($D_0$) és a bélyeg átmérőjének ($d_p$) aránya: $LDR = D_0 / d_p$. Az LDR értéke erősen anyagfüggő és közvetlenül összefügg az átlagos Lankford-paraméterrel ($\bar{r}$).
+    \item \textbf{Lemezvastagság hatása:} A vastagság-átmérő arány ($t_0/d_p$) növelése javítja a mélyhúzhatóságot.
+    \item \textbf{Alakítási sebesség hatása:} Nagyobb sebességeknél figyelembe kell venni az alakváltozási sebesség hatását (strain rate effect), amely növeli a folyáshatárt.
+    \item \textbf{Súrlódási viszonyok:} A súrlódás alapvetően befolyásolja az anyagáramlást és az alakítóerő nagyságát.
+\end{itemize}
+
 \subsection{A mélyhúzás tipikus hibái és azok okai}
-\subsection{A mélyhúzás, mint egyensúlyi folyamat}
+\begin{itemize}
+    \item \textbf{Ráncosodás (wrinkling):} A tangenciális nyomófeszültség következtében a peremrégióban lokális instabilitás lép fel. Megelőzése megfelelő peremtartó erővel lehetséges.
+    \item \textbf{Szakadás (tearing/fracture):} Túlzott radiális húzófeszültség vagy nem megfelelő anyagnyúlás következménye. Elkerülése érdekében nagyobb szakadási nyúlással és magasabb r-értékkel rendelkező anyagokat kell választani.
+    \item \textbf{Fülképződés (earing):} Az anyag síkbeli anizotrópiája ($\Delta r \neq 0$) miatt kialakuló periodikus magasság-ingadozások.
+    \item \textbf{Elvékonyodás (thinning):} A lemez radiális húzása során bekövetkező vastagságcsökkenés.
+    \item \textbf{Narancsbőr-effektus (orange peel):} Durva szemcseméretű anyagoknál jelentkező érdes felület.
+\end{itemize}
+
+\subsection{A mélyhúzás mint egyensúlyi folyamat a technológiai ablakban}
+A mélyhúzási folyamat sikere alapvetően egy kényes egyensúly fenntartásán múlik két,
+egymással ellentétes hibalehetőség – a ráncosodás és a szakadás – között. Ez a két hiba
+definiál egy úgynevezett ”technológiai ablakot”, amelyen belül a gyártás biztonságosan
+és hibamentesen végezhető.
+A folyamat logikája a következő:
+\begin{enumerate}
+    \item A peremben ébredő tangenciális nyomófeszültségek a lemez ráncosodását idézik elő \cite{Papeleux2002}. Ennek megakadályozására a ráncfogót kell alkalmazni, amely egy bizonyos erővel a lemezt a húzógyűrűre szorítja \cite{Papeleux2002}.
+    \item A ráncfogó erő növelésével a ráncosodási hajlam csökken. Azonban a nagyobb leszorítóerő megnöveli a súrlódást a lemez és a szerszám felületei között.
+    \item A megnövekedett súrlódás miatt a húzóbélyegnek nagyobb erőt kell kifejtenie ahhoz, hogy az anyagot a húzógyűrűbe húzza.
+    \item Ez a megnövekedett húzóerő növeli a feszültséget a munkadarab palástjában. Ha ez a feszültség eléri az anyag teherbírásának határát (az ”átszármaztatható szakítószilárdságot”), az alkatrész elszakad \cite{Papeleux2002}.
+\end{enumerate}
+Ebből következik, hogy a ráncfogó erőre létezik egy optimális tartomány, egy technológiai ablak. Ha a ráncfogó erő túl alacsony, a folyamatot a ráncosodás korlátozza. Ha
+túl magas, a szakadás válik a korlátozó tényezővé. A sikeres mélyhúzás kulcsa ennek az
+ablaknak a megtalálása és a paraméterek beállítása úgy, hogy a folyamat végig ezen a
+biztonságos tartományon belül maradjon.
+Az anyagtulajdonságok, különösen a normál anizotrópia ($r_m$), közvetlenül befolyásolják
+ennek az ablaknak a szélességét. A magasabb $r_m$ értékű anyagok jobban ellenállnak az
+elvékonyodásnak, így nagyobb húzóerőt képesek elviselni szakadás nélkül. Ezáltal egy
+magasabb $r_m$ értékű anyag ”kitágítja” a biztonságos technológiai ablakot, lehetővé téve
+nagyobb ráncfogó erő alkalmazását vagy nagyobb húzási fokozat elérését, ami végső soron
+egy robusztusabb és megbízhatóbb gyártási folyamatot eredményez.
 
 \section{Mélyhúzó szerszámok tervezése}
 \subsection{A szerszám felépítése}
+A mélyhúzó szerszám három alapvető funkcionális egységből áll:
+\begin{itemize}
+    \item \textbf{Bélyeg (punch):} Meghatározza az alkatrész belső alakját. Anyaga jellemzően edzett szerszámacél (pl. X210Cr12).
+    \item \textbf{Húzógyűrű (die/mátrix):} Meghatározza az alkatrész külső alakját. A bélyeg és a húzógyűrű közötti rés (clearance) kritikus paraméter.
+    \item \textbf{Peremtartó (blank holder):} Biztosítja a teríték rögzítését és szabályozott normálerővel nyomja azt a húzógyűrű felületére.
+\end{itemize}
+A szerszámok anyaga jellemzően speciális szerszámacélokból (pl. SKD11/1.2344, AISI D2) készül, amelyek nagy keménységet és kopásállóságot biztosítanak.
+
 \subsection{A szerszámgeometria szerepe}
+A szerszámgeometria, különösen a lekerekítési sugarak (bélyegsugár $r_p$ és húzógyűrű-sugár $r_d$), alapvetően befolyásolja a feszültségeloszlást és az anyagáramlást. Túl kicsi sugarak szakadáshoz, túl nagyok pedig a méretpontosság elvesztéséhez vezethetnek. \cite{Luo2021} részletesen vizsgálták a sugár hatását mikro-mélyhúzás esetében.
+
 \subsection{Technológiai erők számítása}
+Az egyszerűsített analitikus képlet a bélyegerő maximumának becsléséhez:
+$F_{draw} = \pi \times d_p \times t \times \sigma_{UTS} \times (D_0/d_p - \beta)$
+ahol $d_p$ a bélyeg átmérője, $t$ a lemezvastagság, $\sigma_{UTS}$ a szakítószilárdság, $D_0$ a teríték átmérője, és $\beta$ egy kísérleti korrekciós tényező (≈0,6-0,7). Az anizotrópia figyelembevételéhez Hill'48 vagy fejlettebb folyási kritériumokat kell integrálni az erőszámításba.
 
 \section{Végeselem módszer}
 \subsection{Végeselem módszer alapelvei}
+A végeselem-módszer (Finite Element Method, FEM) numerikus technika parciális differenciálegyenletek közelítő megoldására. A módszer alapja a kontinuum felosztása véges számú, egyszerű geometriájú elemre (végeselem), amelyek csomópontjaiban az ismeretlen változókat (elmozdulás, feszültség, alakváltozás) interpolációs függvényekkel közelítjük.
+
 \subsection{Mélyhúzási folyamat szimulációja VEM-mel}
+A VEM szimulációk lehetővé teszik a komplex geometriák, nemlineáris anyagmodellek és kontaktusok pontos modellezését. Két fő megközelítés létezik:
+\begin{itemize}
+    \item \textbf{Explicit időintegrációs módszer:} Hatékony nagy deformációs, dinamikus folyamatok szimulációjára (pl. LS-DYNA, ABAQUS/Explicit).
+    \item \textbf{Implicit időintegrációs módszer:} Stabilis nagyobb időlépésekkel, kvázistatikus folyamatok és visszarugózás-analízis esetében preferált (pl. ABAQUS/Standard, ANSYS/Static).
+\end{itemize}
+A lemezalakítás szimulációjában leggyakrabban héjelemeket (shell elements) használnak. A legelterjedtebb kereskedelmi szoftverek a mélyhúzás szimulációjára az AutoForm, a Pam-Stamp, az LS-DYNA és az Abaqus.
+
 \subsection{Anyagmodellek}
+A pontos szimulációhoz elengedhetetlenek a fejlett anyagmodellek.
+\begin{itemize}
+    \item \textbf{Anizotróp folyási kritériumok:} A Hill'48 kritérium a legegyszerűbb, de korlátozott pontosságú \cite{Mu2022}. A Yld2000-2d \cite{Barlat2003} kiváló pontossággal írja le az alumíniumötvözetek viselkedését. A Yld2004-18p (Barlat et al., 2005) erősen anizotróp BCC és HCP anyagokhoz készült.
+    \item \textbf{Keményedési modellek:} Az izotróp modellek nem képesek leírni a Bauschinger-effektust. A kinematikus és kombinált keményedési modellek reálisabb leírást adnak komplex terhelési történetek esetén.
+\end{itemize}
+A legelterjedtebb szoftverek (ABAQUS, LS-DYNA, AutoForm) különböző szinteken támogatják ezen modellek implementációját, gyakran felhasználói alprogramokon (UMAT) keresztül.
 
 \chapter{Anyagok és módszerek}
 
@@ -430,7 +578,7 @@ Jelen irodalmi áttekintés célja, hogy átfogó képet nyújtson a mélyhúzá
 
 \footnotesize  % Kisebb betűméret [Smaller font size]
 \bibliographystyle{unsrtnat}
-%\bibliography{bib/mybib}
+\bibliography{bib/mybib}
 \newpage
 %\printbibliography
 
