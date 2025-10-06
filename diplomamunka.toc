@@ -1,0 +1,30 @@
+\select@language {magyar} \contentsline {chapter}{Előszó}{ix}{chapter*.3}%
+\select@language {magyar} \contentsline {chapter}{Jelölések jegyzéke}{x}{chapter*.5}%
+\select@language {magyar} \contentsline {chapter}{\numberline {1}Bevezetés}{1}{chapter.1}%
+\select@language {magyar} \contentsline {chapter}{\numberline {2}Irodalmi áttekintés}{3}{chapter.2}%
+\select@language {magyar} \contentsline {section}{\numberline {2.1}Képlékeny alakítás elméleti alapjai}{4}{section.2.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.1.1}Rugalmas és képlékeny alakváltozás}{4}{subsection.2.1.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.1.2}Feszültség-alakváltozás kapcsolata, szakítódiagram}{4}{subsection.2.1.2}%
+\select@language {magyar} \contentsline {section}{\numberline {2.2}Mikroszerkezettől a tervezésig}{4}{section.2.2}%
+\select@language {magyar} \contentsline {section}{\numberline {2.3}Lemezek képlékeny anizotrópiája}{4}{section.2.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.3.1}Az anizotrópia}{4}{subsection.2.3.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.3.2}Lankford-tényező}{4}{subsection.2.3.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.3.3}Csúcsosodás, az anizotrópia közvetlen hatása}{4}{subsection.2.3.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.3.4}Ideális mélyhúzható lemez}{4}{subsection.2.3.4}%
+\select@language {magyar} \contentsline {section}{\numberline {2.4}A mélyhúzás technológiája}{4}{section.2.4}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.4.1}A mélyhúzás alapelvei, fázisai}{4}{subsection.2.4.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.4.2}Meghatározó technológiai paraméterek}{4}{subsection.2.4.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.4.3}A mélyhúzás tipikus hibái és azok okai}{4}{subsection.2.4.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.4.4}A mélyhúzás, mint egyensúlyi folyamat}{4}{subsection.2.4.4}%
+\select@language {magyar} \contentsline {section}{\numberline {2.5}Mélyhúzó szerszámok tervezése}{4}{section.2.5}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.5.1}A szerszám felépítése}{4}{subsection.2.5.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.5.2}A szerszámgeometria szerepe}{4}{subsection.2.5.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.5.3}Technológiai erők számítása}{4}{subsection.2.5.3}%
+\select@language {magyar} \contentsline {section}{\numberline {2.6}Végeselem módszer}{4}{section.2.6}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.6.1}Végeselem módszer alapelvei}{4}{subsection.2.6.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.6.2}Mélyhúzási folyamat szimulációja VEM-mel}{4}{subsection.2.6.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.6.3}Anyagmodellek}{4}{subsection.2.6.3}%
+\select@language {magyar} \contentsline {chapter}{\numberline {3}Anyagok és módszerek}{5}{chapter.3}%
+\select@language {magyar} \contentsline {chapter}{\numberline {4}Szerszámkialakítás}{6}{chapter.4}%
+\select@language {magyar} \contentsline {chapter}{\numberline {5}Mérési eredmények értékelése}{7}{chapter.5}%
+\select@language {magyar} \contentsline {chapter}{\numberline {6}Összefoglalás}{8}{chapter.6}%
