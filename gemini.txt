@@ -1,0 +1,644 @@
+A Mélyhúzás Technológiai Folyamatának Átfogó
+Elemzése, Különös Tekintettel az Anyaganizotrópia
+Hatásaira
+Kutatási Jelentés
+2025. október 6.
+
+Tartalomjegyzék
+1. A Képlékeny Alakı́tás Elméleti Alapjai
+1.1. Az Anyagok Mechanikai Viselkedése: Rugalmas és Képlékeny Alakváltozás
+1.2. A Feszültség-Alakváltozás Kapcsolat és a Folyásgörbe . . . . . . . . . . .
+1.3. A Mikroszerkezettől a Gépészeti Tervezésig . . . . . . . . . . . . . . . . .
+
+2
+2
+2
+3
+
+2. A Lemezek Képlékeny Anizotrópiája
+2.1. Az Anizotrópia Fogalma és Eredete . . . . . . . . . . . . . . . . . . . . .
+2.2. Az Anizotrópia Mennyiségi Jellemzése: A Lankford-együttható . . . . . .
+2.3. A Csúcsosodás (Earing): A Sı́kbeli Anizotrópia Látható Következménye .
+2.4. Az Ideális Mélyhúzó Lemez Tulajdonságai . . . . . . . . . . . . . . . . .
+
+4
+4
+4
+5
+5
+
+3. A Mélyhúzás Technológiája
+3.1. Az Eljárás Alapelvei és Fázisai . . . . . . . . . . . . . . . . . . . . . . . .
+3.2. Meghatározó Technológiai Paraméterek . . . . . . . . . . . . . . . . . . .
+3.3. A Mélyhúzás Tipikus Hibái és Okaik . . . . . . . . . . . . . . . . . . . .
+3.4. A Mélyhúzás mint Egyensúlyi Folyamat a Technológiai Ablakban . . . .
+
+6
+6
+7
+7
+9
+
+4. Mélyhúzó Szerszámok Tervezése és Terhelései
+4.1. A Mélyhúzó Szerszám Felépı́tése . . . . . . . . . . . . . . . . . . . . . . .
+4.2. A Szerszámgeometria Szerepe . . . . . . . . . . . . . . . . . . . . . . . .
+4.3. A Technológiai Erők Számı́tása . . . . . . . . . . . . . . . . . . . . . . .
+4.4. A Szerszámtervezés mint Anyagáramlás-menedzsment . . . . . . . . . . .
+
+9
+9
+10
+11
+11
+
+5. A Végeselemes Módszer (VEM) Alkalmazása
+5.1. A VEM Alapelvei . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5.2. Mélyhúzási Folyamatok Szimulációja VEM-mel . . . . . . . . . . . . . .
+5.3. A Pontos Anyagmodellek Jelentősége . . . . . . . . . . . . . . . . . . . .
+5.4. A VEM mint a Komplexitáskezelés Eszköze . . . . . . . . . . . . . . . .
+
+12
+12
+12
+13
+13
+
+6. Következtetések
+
+14
+
+1
+
+1. A Képlékeny Alakı́tás Elméleti Alapjai
+A képlékeny alakı́tás a modern gyártástechnológia egyik legfontosabb és legdinamikusabban fejlődő területe, amely lehetővé teszi fémekből és ötvözeteikből félkész termékek,
+szerkezeti elemek és készalkatrészek gazdaságos előállı́tását [10, 14]. Az eljárás alapvető
+célja, hogy a kiinduló előgyártmány alakját és méreteit külső erők alkalmazásával, maradó
+alakváltozás révén változtassa meg. A folyamat megértéséhez elengedhetetlen az anyagok
+mechanikai viselkedésének, a feszültség és alakváltozás közötti kapcsolatnak, valamint az
+alakı́tás során végbemenő mikroszerkezeti változásoknak az ismerete.
+
+1.1. Az Anyagok Mechanikai Viselkedése: Rugalmas és Képlékeny
+Alakváltozás
+A képlékeny alakı́tás definı́ció szerint olyan gyártási eljárás, amely során egy test alakját és
+méreteit külső erőrendszer segı́tségével, maradó alakváltozás létrehozásával változtatják
+meg, miközben az anyagfolytonosság nem szakad meg – tehát sem törés, sem repedés
+nem keletkezik –, és a test térfogata, illetve tömege gyakorlatilag változatlan marad
+[10, 23]. Ezen tulajdonsága miatt az eljárást régebben ”forgács nélküli megmunkálásnak”
+is nevezték, megkülönböztetve a forgácsolási eljárásoktól, ahol anyagleválasztás történik
+[14].
+A fémek terhelés hatására bekövetkező alakváltozása két alapvető tartományra osztható: rugalmas (elasztikus) és képlékeny (plasztikus) alakváltozásra.
+• Rugalmas alakváltozás: A terhelés hatására a test megváltoztatja alakját, de
+a terhelés megszűnése után visszanyeri eredeti geometriáját [5]. Ez a deformáció
+a kristályrács atomjainak ideiglenes elmozdulásával jár, anélkül, hogy az atomok
+közötti kötések tartósan megváltoznának. A legtöbb fém kis terhelések esetén rugalmasan viselkedik [5].
+• Képlékeny alakváltozás: Ha a terhelés egy bizonyos határt, a folyáshatárt meghaladja, az alakváltozás egy része maradóvá válik. A terhelés megszüntetése után a
+test nem nyeri vissza eredeti alakját; ez a maradó deformáció a képlékeny alakváltozás
+[14, 6]. A képlékeny alakváltozás a fémek kristályszerkezetében, a csúszási sı́kok
+mentén történő atomi elmozdulásokkal, azaz diszlokációk mozgásával valósul meg
+[13]. Ez a mikroszkopikus mechanizmus teszi lehetővé a fémek képlékeny formálhatóságát.
+A képlékeny alakı́tás technológiája lehet hideg- vagy melegalakı́tás, attól függően,
+hogy a folyamat az anyag újrakristályosodási hőmérséklete alatt vagy felett zajlik-e
+[1, 17]. A hidegalakı́tás során az anyag tulajdonságai jelentősen megváltoznak, mı́g a
+melegalakı́tás közben az anyagszerkezet folyamatosan regenerálódik [1].
+
+1.2. A Feszültség-Alakváltozás Kapcsolat és a Folyásgörbe
+Az anyag képlékeny alakı́tás közbeni viselkedésének legfontosabb leı́ró eszköze a feszültségalakváltozás görbe, vagy más néven folyásgörbe. Ez a diagram grafikusan ábrázolja,
+hogy egy adott alakváltozás létrehozásához mekkora feszültség szükséges [8, 12]. A görbe
+menete az anyag ”ujjlenyomataként” is felfogható, amely alapvetően meghatározza az
+alakı́thatóságát.
+A görbe jellegzetes pontjai és szakaszai a következők:
+2
+
+• Folyáshatár (Rp0,2 ): Az a feszültségszint, amelynél a képlékeny alakváltozás megindul. A hidegalakı́tás során az alakı́tatlan fém kiinduló folyáshatára megegyezik a
+statikus szakı́tóvizsgálattal mért folyáshatárral [23].
+• Alakı́tási keményedés (Strain Hardening): A hidegalakı́tás során, ahogy az
+anyag képlékenyen deformálódik, egyre nagyobb feszültség szükséges a további
+alakváltozás fenntartásához. Ezt a jelenséget alakı́tási keményedésnek nevezzük.
+Ennek oka a diszlokációk felszaporodása és kölcsönhatása a kristályszerkezetben,
+amelyek egyre jobban akadályozzák egymás mozgását [13]. A feszültség-alakváltozás
+görbe ezen szakasza emelkedő tendenciát mutat [12].
+• Alakı́tási szilárdság (kf ): A hidegalakı́tás során a felkeményedett fém mindenkori, pillanatnyi folyáshatárát alakı́tási szilárdságnak nevezzük. Ez tehát nem egy
+konstans anyagjellemző, hanem az alakváltozás mértékének, az alakváltozási sebességnek és az alakı́tási hőmérsékletnek a függvénye: kf = f (ϕeq , ϕ̇eq , T ) [12, 23].
+Hidegalakı́tásnál a hőmérsékletfüggést gyakran elhanyagolják.
+Az alakı́tási szilárdság pontos ismerete kulcsfontosságú a technológiai folyamatok tervezésénél, mivel ez határozza meg a szükséges alakı́tóerőt és munkát.
+
+1.3. A Mikroszerkezettől a Gépészeti Tervezésig
+Az anyagok képlékeny alakı́thatósága mögött egy szigorú okozati lánc húzódik, amely
+a fémek atomi szintű szerkezetétől egészen a gyártáshoz szükséges gépek kiválasztásáig
+terjed. Ez a kapcsolat rávilágı́t arra, hogy a fémfizikai alapelvek hogyan válnak a gépészeti
+tervezés kézzelfogható peremfeltételeivé.
+A folyamat a fémek polikristályos szerkezetében kezdődik. A képlékeny alakváltozás
+alapvető mechanizmusa a kristályrács hibáinak, az úgynevezett diszlokációknak a mozgása
+a csúszási sı́kok mentén [13]. Amikor külső erő hat a fémre, ezek a diszlokációk elmozdulnak, ami makroszkopikus szinten alakváltozásként jelenik meg.
+Az alakı́tás előrehaladtával a diszlokációk száma drasztikusan megnő, egymásba gabalyodnak, és akadályozzák egymás további mozgását. Ez a mikroszkopikus jelenség vezet
+a makroszkopikus szinten megfigyelhető alakı́tási keményedéshez: az anyag egyre jobban ellenáll a további deformációnak [12].
+Ez a növekvő ellenállás azt jelenti, hogy a folyamat fenntartásához egyre nagyobb
+feszültséget kell az anyagra kifejteni. Ezt a pillanatnyi feszültségszintet nevezzük alakı́tási
+szilárdságnak (kf ) [23]. Az alakı́tási szilárdság tehát közvetlen következménye a diszlokációk viselkedésének.
+Végül, amikor egy mérnök egy mélyhúzó szerszámot és a hozzá tartozó technológiát
+tervezi, az egyik legfontosabb feladata a maximálisan fellépő húzóerő (FH ) meghatározása
+[20]. Ez az erő szükséges ahhoz, hogy a megfelelő méretű és teljesı́tményű sajtológépet
+ki tudja választani. A húzóerő számı́tására szolgáló képletekben az egyik kulcsparaméter
+az anyag szakı́tószilárdsága (Rm ) vagy alakı́tási szilárdsága (kf ) [20].
+Így zárul be a kör: a kristályrácsban mozgó diszlokációk viselkedése közvetlenül meghatározza az anyag alakı́tási szilárdságát, ami pedig megszabja a szükséges alakı́tóerőt,
+és ezen keresztül a gyártáshoz szükséges gép méretét és költségét. Ez a láncolat egy direkt és számszerűsı́thető kapcsolatot teremt a fémfizika és a gyakorlati gépészeti tervezés
+között.
+
+3
+
+2. A Lemezek Képlékeny Anizotrópiája
+A lemezalakı́tási technológiák, különösen a mélyhúzás elemzése során az egyik legfontosabb jelenség az anyagok anizotrópiája. Mı́g az egyszerűsı́tett, izotróp anyagmodellek az anyag tulajdonságait minden irányban azonosnak tekintik, a valóságban a lemezanyagok túlnyomó többsége anizotróp módon viselkedik, ami alapvetően befolyásolja az
+alakı́thatóságot és a késztermék minőségét [4].
+
+2.1. Az Anizotrópia Fogalma és Eredete
+Az anizotrópia az anyag fizikai és mechanikai tulajdonságainak irányfüggőségét jelenti. A
+lemezalakı́tás kontextusában ez azt jelenti, hogy a lemez másképp viselkedik a hengerlési
+irányban, az arra merőleges (kereszt-) irányban, és a vastagsági irányban [9].
+Az anizotrópia elsődleges oka a gyártási folyamat, legfőképpen a hengerlés során kialakuló krisztallográfiai textúra. A hengerlés során a fém polikristályos szerkezetének
+egyes szemcséi a deformáció hatására elfordulnak, és egy vagy több preferált kristálytani
+orientációba rendeződnek. Ez a rendezettség okozza, hogy a lemez mechanikai tulajdonságai, mint például a folyáshatár vagy az alakváltozási képesség, irányfüggővé válnak
+[9].
+A lemezalakı́tás numerikus szimulációjában (VEM) kulcsfontosságú a megfelelő anyagmodell kiválasztása. Az izotróp folyási feltételek (pl. Tresca-St. Venant, Huber-MisesHencky) nem veszik figyelembe az irányfüggőséget. Ezzel szemben az anizotróp folyási
+feltételek (pl. Hill ’48, Hosford, Barlat) beépı́tik az anizotrópia hatását, ı́gy sokkal
+valósághűbb eredményeket szolgáltatnak a lemezanyagok folyási viselkedésének előrejelzésében
+[4].
+
+2.2. Az Anizotrópia Mennyiségi Jellemzése: A Lankford-együttható
+A képlékeny anizotrópia számszerűsı́tésére a legelterjedtebben használt paraméter a Lankfordegyüttható, vagy más néven r-érték (plasztikus alakváltozási arány) [16, 25]. Az r-érték
+a lemez elvékonyodással szembeni ellenállásának mértéke. Definı́ció szerint a szélességi
+(εw ) és a vastagsági (εt ) logaritmikus (valódi) alakváltozások hányadosa egytengelyű
+húzóvizsgálat során [4, 16]:
+ln ww0
+εw
+r=
+=
+(1)
+εt
+ln tt0
+Az anizotrópia leı́rására két fő r-érték alapú mutatót használnak:
+• Normál anizotrópia (rm vagy r̄): Ez a mutató a lemez átlagos ellenállását
+jellemzi az elvékonyodással szemben. Az rm értékét a hengerlési irányhoz képest
+különböző szögekben (tipikusan 0°, 45° és 90°) mért r-értékek súlyozott átlagaként
+számı́tják [25, 2]:
+r0 + 2r45 + r90
+rm =
+(2)
+4
+Az rm > 1 érték azt jelzi, hogy az anyag hajlamosabb a sı́kban deformálódni,
+mint elvékonyodni, ami kedvező a mélyhúzhatóság szempontjából, mivel növeli a
+szakadással szembeni ellenállást [25, 24].
+
+4
+
+• Sı́kbeli anizotrópia (∆r): Ez a mutató az r-érték sı́kbeli változását, azaz az
+irányfüggőség mértékét jellemzi. Képlete a következő [25, 2]:
+∆r =
+
+r0 − 2r45 + r90
+2
+
+(3)
+
+A ∆r értéke közvetlenül felelős a mélyhúzás során kialakuló csúcsosodás (earing)
+jelenségéért. A ∆r = 0 érték a teljesen izotróp sı́kbeli viselkedést jelenti, ami a
+csúcsosodás elkerülésének feltétele [25, 26].
+A mérnöki gyakorlatban az r-értéket gyakran egyetlen konstans számmal jellemzik.
+Azonban a kutatások rámutattak, hogy az r-érték maga is szignifikánsan változhat a
+képlékeny alakváltozás előrehaladtával, és ez a változás függ az orientációtól is. Ezt a
+dinamikus viselkedést akár egy másodfokú polinommal is le lehet ı́rni: rα (ε̄) = Aα ε̄2 +
+Bα ε̄ + Cα [4]. Ez a felismerés különösen fontos a nagy alakváltozással járó technológiák és
+a nagy pontosságú numerikus szimulációk szempontjából, mivel az anizotrópia folyamatos
+változása befolyásolja a feszültségek lokalizációját és a hiba kialakulásának folyamatát.
+
+2.3. A Csúcsosodás (Earing): A Sı́kbeli Anizotrópia Látható
+Következménye
+A csúcsosodás (vagy fülesedés) a mélyhúzott üreges testek peremén kialakuló, periodikusan ismétlődő hullámosság. A jelenség közvetlen oka a lemez sı́kbeli anizotrópiája, amely
+az anyag nem egyenletes beáramlását eredményezi a húzógyűrűbe a különböző irányokból
+[26]. Mivel az anyag a különböző irányokban eltérő mértékben ellenáll az alakváltozásnak
+(amit az r-érték irányfüggése jellemez), a perem egyes részei gyorsabban, mások lassabban
+áramlanak be, ami a jellegzetes hullámos peremprofilt hozza létre.
+A sı́kbeli anizotrópiát jellemző ∆r paraméter előjele és nagysága közvetlen kapcsolatban áll a kialakuló csúcsok számával és helyzetével. Ez a kapcsolat a mélyhúzott minta
+anizotrópiájának vizsgálatakor az egyik legfontosabb diagnosztikai eszköz.
+1. táblázat. A sı́kbeli anizotrópia (∆r) és a csúcsosodási minta kapcsolata [25, 2, 26]
+∆r Értéke
+
+Csúcsosodási Minta
+
+∆r > 0
+
+Két vagy négy csúcs jelenik meg a hengerlési irányban (0°)
+és az arra merőleges irányban (90°).
+Négy csúcs jelenik meg a hengerlési irányhoz képest 45°-os (átlós) irányokban.
+Ideális eset, nincs csúcsosodás. A perem egyenletes, kör alakú marad.
+
+∆r < 0
+∆r = 0
+
+A csúcsosodás egy technológiai hiba, amely utólagos megmunkálást (pl. peremlevágást) tesz szükségessé, növelve ezzel a gyártási költségeket és az anyagveszteséget.
+Ezért a mélyhúzásra szánt lemezanyagok fejlesztésénél az egyik fő cél a ∆r értékének
+minimalizálása, azaz a nullához való közelı́tése.
+
+2.4. Az Ideális Mélyhúzó Lemez Tulajdonságai
+A szakirodalomban látszólagos ellentmondás feszül az ideális mélyhúzó lemez tulajdonságait
+illetően. Egyes források a magas r-értéket emelik ki mint a jó alakı́thatóság kulcsát
+[25, 2], mı́g mások az alacsonyabb r-értékű anyagokat javasolják az egyenletes alakváltozás
+5
+
+érdekében, különösen hengeres alkatrészeknél [24]. A feloldás a normál (rm ) és a sı́kbeli
+(∆r) anizotrópia hatásának szétválasztásában rejlik.
+A sikeres mélyhúzás két, egymástól független kritérium teljesülését igényli:
+1. A maximális húzási mélység elérése szakadás nélkül. Ezt a tulajdonságot a
+normál anizotrópia (rm ) határozza meg. A magas rm érték (rm > 1) azt jelenti,
+hogy az anyag erősen ellenáll az elvékonyodásnak, ami a fenékszakadás elsődleges
+oka. A magas rm értékű lemezek palástja nagyobb húzóerőt képes elviselni, ı́gy
+mélyebb csészét lehet belőlük húzni.
+2. A késztermék geometriai minősége, különösen a perem egyenletessége.
+Ezt a tulajdonságot a sı́kbeli anizotrópia (∆r) határozza meg. A nullához
+közeli ∆r érték biztosı́tja az egyenletes anyagbeáramlást minden irányból, ami a
+csúcsosodásmentes, minőségi termék előállı́tásának feltétele.
+Ebből következik, hogy az ideális mélyhúzó lemez nem egyszerűen ”magas” vagy ”alacsony” r-értékű. Az ideális lemeznek egyszerre magas a normál anizotrópiája (rm )
+és a nullához közeli a sı́kbeli anizotrópiája (∆r). Más szavakkal, a cél egy olyan
+anyag, amelynek r-értéke minden sı́kbeli irányban magas és közel azonos. A [24] forrás
+pontatlanul fogalmaz, amikor ”alacsony R-értéket” emlı́t; valójában az r-értékek alacsony
+szórására, azaz alacsony ∆r értékre utal.
+
+3. A Mélyhúzás Technológiája
+A mélyhúzás a lemezalakı́tó eljárások egyik legfontosabb és legszélesebb körben alkalmazott technológiája. Lehetővé teszi sı́k lemezből komplex, üreges testek, például edények,
+autókarosszéria-elemek vagy csomagolóanyagok tömeges és gazdaságos előállı́tását [20,
+22]. A folyamat sikere számos technológiai paraméter precı́z beállı́tásán és a fellépő hibajelenségek ismeretén múlik.
+
+3.1. Az Eljárás Alapelvei és Fázisai
+A mélyhúzás olyan képlékeny alakı́tó eljárás, amelynek során egy sı́k lemeztárcsát (terı́téket)
+egy mechanikus bélyeg segı́tségével egy formázó szerszámba, a húzógyűrűbe húznak,
+ezáltal üreges testet hozva létre [20, 7]. Az alakı́tás elsősorban húzó igénybevétellel
+történik, de a folyamat során összetett feszültségi állapot alakul ki a munkadarab különböző
+részein.
+A mélyhúzás során a lemez peremrésze, amely a húzógyűrű és a ráncfogó között
+helyezkedik el, komplex terhelésnek van kitéve:
+• Radiális húzófeszültség (σr ): A bélyeg húzóereje okozza, ez a feszültség ”húzza
+be” az anyagot a szerszámüregbe.
+• Tangenciális nyomófeszültség (σt ): Abból adódik, hogy egy nagyobb átmérőjű
+körgyűrűnek egy kisebb átmérőjűvé kell alakulnia. Ez a nyomófeszültség felelős a
+ráncosodási hajlamért [18].
+A munkadarab palástjában, a húzógyűrű lekerekı́tésén áthaladva, az anyagot elsősorban
+tengelyirányú húzófeszültség terheli. A fenékszakadás akkor következik be, ha ez a
+feszültség meghaladja az anyag teherbı́rását [18].
+6
+
+3.2. Meghatározó Technológiai Paraméterek
+A mélyhúzási folyamat eredményességét számos, gondosan megválasztandó paraméter
+befolyásolja.
+• Húzási fokozat (m) vagy húzási arány (β): Ez a dimenzió nélküli szám a
+mélyhúzás mértékét jellemzi. Az első húzásnál a húzási fokozat a húzott csésze
+belső átmérőjének (d) és a kiinduló terı́ték átmérőjének (D) aránya: m = d/D.
+Értéke mindig 1-nél kisebb. A húzási arány ennek reciproka: β = 1/m = D/d [22].
+A húzási fokozatnak van egy alsó határértéke (fokozati határtényező), amely alatt a
+húzás szakadás nélkül nem végezhető el. Ha a kı́vánt végleges átmérő egy lépésben
+nem érhető el, többfokozatú (továbbhúzó) műveletekre van szükség [22, 15].
+• Ráncfogó erő (Blank Holder Force): A peremben ébredő tangenciális nyomófeszültség
+(σt ) a vékony lemezek kihajlását, hullámosodását, azaz ráncosodását okozná. Ennek megakadályozására szolgál a ráncfogó, amely egy meghatározott nyomással
+(pN ) a lemez peremét a húzógyűrű homlokfelületére szorı́tja, megakadályozva annak felemelkedését [22, 18]. A ráncfogó alkalmazása akkor szükséges, ha a terı́ték
+átmérőjének és a lemezvastagságnak az aránya (D/s) vagy a perem szélességének és
+a vastagságnak az aránya ((D-d)/s) egy kritikus értéket meghalad [22]. A ráncfogó
+erő nagysága kritikus: ha túl kicsi, ráncosodás lép fel; ha túl nagy, a megnövekedett
+súrlódás miatt a húzóerő annyira megnő, hogy fenékszakadást okoz.
+
+3.3. A Mélyhúzás Tipikus Hibái és Okaik
+A mélyhúzási folyamat során számos jellegzetes hiba léphet fel, amelyek ismerete elengedhetetlen a sikeres technológiatervezéshez. A hibák a nem megfelelően megválasztott
+technológiai paraméterek, szerszámgeometria vagy alapanyag következményei lehetnek.
+
+7
+
+8
+
+Megjelenési Forma (Leı́rás)
+
+Elsőrendű Ráncosodás
+A munkadarab peremén kialakuló hullámosság.
+Másodrendű Ráncosodás A munkadarab palástján jelentkező ráncok.
+Fenékszakadás
+A munkadarab elszakad a fenék és palást átmeneténél.
+Csúcsosodás (Earing)
+A perem hullámossága, szimmetrikus csúcsok.
+Narancshéjasodás
+A felület érdessé, narancshéjhoz hasonlóvá válása.
+Visszarugózás
+A kész darab méretei eltérnek a szerszámétól.
+
+Hiba Neve
+
+Befo
+
+Túl nagy tangenciális nyomófeszültség (σt ) a peremen. Alacs
+A palást nem fekszik fel a bélyegre.
+Túl n
+A húzófeszültség meghaladja a szakı́tószilárdságot.
+Túl n
+A lemez sı́kbeli anizotrópiája (∆r ̸= 0).
+Anya
+Durva szemcseszerkezet, éles folyáshatár.
+Nem
+A rugalmas alakváltozás-visszanyerés.
+Nagy
+
+Elsődleges Mechanikai Ok
+
+2. táblázat. A mélyhúzás tipikus hibái, azok okai és elhárı́tá
+
+3.4. A Mélyhúzás mint Egyensúlyi Folyamat a Technológiai Ablakban
+A mélyhúzási folyamat sikere alapvetően egy kényes egyensúly fenntartásán múlik két,
+egymással ellentétes hibalehetőség – a ráncosodás és a szakadás – között. Ez a két hiba
+definiál egy úgynevezett ”technológiai ablakot”, amelyen belül a gyártás biztonságosan
+és hibamentesen végezhető.
+A folyamat logikája a következő:
+1. A peremben ébredő tangenciális nyomófeszültségek a lemez ráncosodását idézik elő
+[18]. Ennek megakadályozására a ráncfogót kell alkalmazni, amely egy bizonyos
+erővel a lemezt a húzógyűrűre szorı́tja [18].
+2. A ráncfogó erő növelésével a ráncosodási hajlam csökken. Azonban a nagyobb
+leszorı́tóerő megnöveli a súrlódást a lemez és a szerszám felületei között.
+3. A megnövekedett súrlódás miatt a húzóbélyegnek nagyobb erőt kell kifejtenie ahhoz,
+hogy az anyagot a húzógyűrűbe húzza.
+4. Ez a megnövekedett húzóerő növeli a feszültséget a munkadarab palástjában. Ha ez
+a feszültség eléri az anyag teherbı́rásának határát (az ”átszármaztatható szakı́tószilárdságot”),
+az alkatrész elszakad [18].
+Ebből következik, hogy a ráncfogó erőre létezik egy optimális tartomány, egy technológiai ablak. Ha a ráncfogó erő túl alacsony, a folyamatot a ráncosodás korlátozza. Ha
+túl magas, a szakadás válik a korlátozó tényezővé. A sikeres mélyhúzás kulcsa ennek az
+ablaknak a megtalálása és a paraméterek beállı́tása úgy, hogy a folyamat végig ezen a
+biztonságos tartományon belül maradjon.
+Az anyagtulajdonságok, különösen a normál anizotrópia (rm ), közvetlenül befolyásolják
+ennek az ablaknak a szélességét. A magasabb rm értékű anyagok jobban ellenállnak az
+elvékonyodásnak, ı́gy nagyobb húzóerőt képesek elviselni szakadás nélkül. Ezáltal egy
+magasabb rm értékű anyag ”kitágı́tja” a biztonságos technológiai ablakot, lehetővé téve
+nagyobb ráncfogó erő alkalmazását vagy nagyobb húzási fokozat elérését, ami végső soron
+egy robusztusabb és megbı́zhatóbb gyártási folyamatot eredményez.
+
+4. Mélyhúzó Szerszámok Tervezése és Terhelései
+A mélyhúzó szerszám nem csupán egy passzı́v formaadó elem, hanem egy precı́ziós
+mérnöki szerkezet, amelynek minden komponense és geometriai jellemzője aktı́van szabályozza
+az anyagáramlást a képlékeny alakı́tás során. A szerszámtervezés célja egy olyan fizikai
+környezet megteremtése, amely a lemezanyagot a kı́vánt alakra formálja a technológiai
+hibák elkerülése mellett.
+
+4.1. A Mélyhúzó Szerszám Felépı́tése
+A mélyhúzó szerszámok több alapvető komponensből állnak, amelyek összehangolt működése
+biztosı́tja a folyamat sikerességét [11, 15]. A fő aktı́v elemek a következők:
+• Húzóbélyeg (Punch): A szerszám pozitı́v, mozgó eleme, amely a munkadarab
+belső alakját és méreteit határozza meg. A bélyeg fejti ki a húzóerőt, amely a
+9
+
+terı́téket a húzógyűrűbe préseli [20, 22]. Alakja pontosan meg kell, hogy feleljen a
+késztermék belső geometriájának [15].
+• Húzógyűrű (Die / Drawing Ring): A szerszám negatı́v, általában álló eleme,
+amely a munkadarab külső alakját adja. A húzógyűrű belső kontúrja követi a
+húzóbélyeg alakját, attól a húzórésnyivel nagyobb távolságra [20, 22].
+• Ráncgátló (Blank Holder / Pressure Pad): A ráncfogó feladata, hogy a
+mélyhúzás során a terı́ték peremét a húzógyűrű homlokfelületére szorı́tsa, megakadályozva ezzel az elsőrendű ráncosodást [20, 22]. A ráncgátló lehet rugós vagy
+hidraulikus működtetésű, és nem minden esetben szükséges, különösen vastag lemezek vagy kis húzási fokozatok esetén [22, 15].
+Ezen aktı́v elemeken kı́vül a szerszám számos további komponenst tartalmaz, mint
+például:
+• Kidobó (Ejector): A kész munkadarab eltávolı́tására szolgál a húzógyűrűből vagy
+a bélyegről a művelet végén [15].
+• Vezetőelemek (Guide Pillars, Bushes): Biztosı́tják a szerszám felső és alsó
+felének pontos, kotyogásmentes egymáshoz képesti mozgását.
+• Szerszámlapok és szerszámház: A szerkezeti elemek, amelyek az aktı́v komponenseket rögzı́tik és egy egységes, merev szerkezetbe foglalják [11].
+A szerszámok lehetnek egyfokozatúak (kezdő húzáshoz) vagy többfokozatúak (továbbhúzáshoz),
+utóbbiaknál a ráncgátló gyakran cső alakú, hogy befogadja az előző műveletben már kialakı́tott csészét [15].
+
+4.2. A Szerszámgeometria Szerepe
+A szerszám aktı́v elemeinek geometriája kritikus fontosságú az anyagáramlás szabályozása
+és a hibák elkerülése szempontjából.
+• Lekerekı́tési sugarak (Die and Punch Radii): A húzóbélyeg és a húzógyűrű
+éleinek lekerekı́tési sugarai alapvetően befolyásolják a húzóerő nagyságát és a feszültségek
+eloszlását. Túl kicsi lekerekı́tési sugarak éles élként viselkednek, feszültségkoncentrációt
+okoznak, ami a lemez elnyı́ródásához vagy szakadásához vezethet [18]. A sugarak
+növelése csökkenti a húzóerőt és az anyag igénybevételét, de ha a sugár túl nagy, a
+lemez pereme túl korán kerül ki a ráncgátló szorı́tásából, ami növelheti a ráncosodás
+kockázatát [15].
+• Húzórés (Drawing Clearance): A húzóbélyeg és a húzógyűrű közötti rés, amelyen az anyag áthalad. A húzórés mérete határozza meg a kész darab falvastagságát.
+Ha a rés nagyobb, mint a lemezvastagság, a falvastagság alig változik, de fennáll a
+másodrendű ráncosodás veszélye. Ha a rés kisebb a lemezvastagságnál (falvékonyı́tó
+mélyhúzás), a falvastagság csökken, ami egyben az anyag felkeményedésével is jár
+[18].
+• Húzó- és fékezőbordák (Drawbeads): Komplex alakú alkatrészeknél, ahol az
+anyagáramlás nem egyenletes, a ráncgátló felületébe vagy a húzógyűrűbe mart,
+speciális profilú bordákat alkalmaznak. Ezek a bordák célzottan fékezik az anyag
+10
+
+áramlását azokon a területeken, ahol az túl gyors lenne, és ráncosodást okozna.
+A bordákon áthaladó lemez ismételt hajlı́tása és visszahajlı́tása növeli az alakı́tási
+ellenállást, ezáltal szabályozva az anyagáramlást és elősegı́tve a lemez nyújtását
+[18].
+
+4.3. A Technológiai Erők Számı́tása
+A szerszám és a sajtológép méretezéséhez elengedhetetlen a folyamat során fellépő erők
+ismerete.
+• Húzóerő (FH ): A maximális erő, amelyet a bélyegnek ki kell fejtenie az alakı́tás
+során. A húzóerő a folyamat elején nulláról indul, egy maximumot ér el a löket
+közepén, majd a végén ismét lecsökken. A számı́tására a gyakorlatban több tapasztalati képletet használnak. Egy általános megközelı́tés szerint a húzóerő arányos
+a húzott palást kerületével, a lemezvastagsággal és az anyag szakı́tószilárdságával
+(Rm ), de figyelembe veszi a súrlódást és a ráncfogó által okozott erőt is [20]. A
+maximális húzóerő nem haladhatja meg a húzott palást teherbı́rását, különben szakadás következik be [20].
+• Ráncfogó erő (FRF ): A ráncosodás megakadályozásához szükséges erő. Nagysága
+függ a lemezanyag szilárdságától, vastagságától és a perem geometriájától. A
+ráncfogó nyomásának (pN ) számı́tására Siebel dolgozott ki először összefüggést,
+de napjainkban a végeselemes szimuláció (VEM) adja a legpontosabb módszert a
+szükséges erő meghatározására [18].
+
+4.4. A Szerszámtervezés mint Anyagáramlás-menedzsment
+A mélyhúzó szerszám tervezése messze túlmutat a kı́vánt alkatrész negatı́v formájának
+egyszerű létrehozásán. A valóságban a szerszámtervezés egy aktı́v, dinamikus folyamat,
+amely az anyagáramlás menedzselésére irányul. A szerszám minden egyes geometriai
+eleme egyfajta ”szelepként”, ”fékként” vagy ”terelőként” funkcionál, amely az anyag
+áramlását precı́zen szabályozza.
+A húzógyűrű lekerekı́tési sugara [18] nem csupán egy egyszerű élletörés, hanem egy
+gondosan tervezett felület, amelyen az anyagnak meg kell hajolnia, majd vissza kell hajolnia. A sugár mérete és profilja határozza meg, hogy ez a folyamat mekkora belső
+feszültséggel és súrlódással jár az anyag számára, ezáltal befolyásolva a szükséges húzóerőt.
+A húzó- és fékezőbordák [18] még ennél is direktebb beavatkozást jelentenek. Ezek
+tudatosan beépı́tett akadályok, amelyeket a tervező olyan helyeken alkalmaz, ahol az
+anyag túl könnyen és gyorsan áramlana be a szerszámüregbe, ami ráncosodást vagy a
+kı́vánt nyújtás elmaradását okozná. A bordák arra kényszerı́tik a lemezt, hogy egy szűk,
+kanyargós pályán haladjon, ami megnöveli az áramlási ellenállást, és megfeszı́ti a lemezt,
+biztosı́tva a sima, ráncmentes felületet.
+Ebből a szempontból a szerszámtervező egy fizikai algoritmust hoz létre a szerszám
+geometriájával. Ez az algoritmus arra kényszerı́ti az anyagot, hogy a kı́vánt módon, a
+kı́vánt sebességgel és a megfelelő feszültségi állapotban áramoljon, elkerülve a 3. fejezetben tárgyalt hibajelenségeket. A tervezés tehát nem passzı́v formakialakı́tás, hanem a
+materiatranszport aktı́v menedzselése, ahol a szerszám geometriája a szabályozó eszköz.
+
+11
+
+5. A Végeselemes Módszer (VEM) Alkalmazása
+A modern gépészeti tervezés, különösen a komplex képlékenyalakı́tási folyamatok elemzése
+és optimalizálása ma már elképzelhetetlen a numerikus szimulációs eljárások, ezen belül
+is a Végeselemes Módszer (VEM, angolul Finite Element Method, FEM) nélkül. A VEM
+lehetővé teszi a bonyolult fizikai jelenségek virtuális térben történő vizsgálatát, jelentősen
+csökkentve a drága és időigényes fizikai kı́sérletek számát.
+
+5.1. A VEM Alapelvei
+A Végeselemes Módszer egy numerikus eljárás, amelyet mérnöki és fizikai problémákat
+leı́ró parciális differenciálegyenletek közelı́tő megoldására fejlesztettek ki [27]. A módszer
+alapvető szerepet játszik a gépészmérnöki tervezői munkában, különösen a szilárdságtani,
+dinamikai, hővezetési és áramlástani problémák elemzésében [19].
+A VEM lényege a diszkretizáció: a vizsgált folytonos testet (kontinuumot), például
+egy mélyhúzandó lemezt, véges számú, egyszerűbb geometriájú elemre (pl. háromszög
+vagy négyszög alakú héjelemekre) bontják. Ezek a végeselemek a csomópontjaikban
+kapcsolódnak egymáshoz, létrehozva a végeselemes hálót [27, 19].
+A módszer lépései a következők:
+1. Diszkretizáció: A vizsgált test geometriájának felosztása végeselemekre.
+2. Elemi egyenletek felállı́tása: Minden egyes elemre felı́rják a viselkedését leı́ró
+fizikai egyenleteket (pl. egyensúlyi egyenleteket) mátrixos formában. Ez az elemi
+merevségi mátrix.
+3. Globális egyenletrendszer összeállı́tása: Az elemi mátrixokból összeállı́tják a
+teljes szerkezetre vonatkozó globális egyenletrendszert, amely a csomópontok ismeretlen elmozdulásait tartalmazza.
+4. Peremfeltételek alkalmazása: Figyelembe veszik a külső erőket (terheléseket)
+és a kényszereket (megfogásokat).
+5. Megoldás: A nagyméretű lineáris vagy nemlineáris egyenletrendszert numerikus
+módszerekkel megoldják, meghatározva a csomópontok elmozdulásait.
+6. Eredmények kiértékelése: A csomóponti elmozdulásokból visszaszámolhatók az
+egyes elemekben ébredő feszültségek, alakváltozások és egyéb releváns mennyiségek
+[27, 19].
+
+5.2. Mélyhúzási Folyamatok Szimulációja VEM-mel
+A mélyhúzás egy rendkı́vül komplex folyamat, amelyet a nagymértékű képlékeny alakváltozás,
+a nemlineáris anyagviselkedés (alakı́tási keményedés, anizotrópia), valamint a szerszám
+és a munkadarab közötti változó kontakt- és súrlódási viszonyok jellemeznek. A VEM
+kiválóan alkalmas ezen jelenségek együttes modellezésére.
+Egy mélyhúzási szimuláció segı́tségével a mérnökök képesek előre jelezni [21, 3]:
+• Anyagáramlás: Hogyan mozog és deformálódik a lemez az alakı́tás során.
+• Feszültség- és alakváltozás-eloszlás: A kritikus helyek azonosı́tása, ahol a
+feszültségek vagy alakváltozások koncentrálódnak.
+12
+
+• Lemezvékonyodás: A falvastagság változásának nyomon követése, a szakadásveszélyes
+területek feltárása.
+• Hibajelenségek: A ráncosodás, szakadás és a visszarugózás mértékének és helyének
+előrejelzése.
+• Szükséges erők: A húzóerő és a ráncfogó erő időbeli lefolyásának meghatározása
+a gépkiválasztáshoz és a folyamat beállı́tásához.
+A szimuláció lehetővé teszi a ”mi lenne, ha” tı́pusú elemzéseket: a terı́ték alakjának,
+a szerszámgeometriának (pl. lekerekı́tési sugarak) vagy a technológiai paramétereknek
+(pl. ráncfogó erő, kenés) a virtuális optimalizálását a drága és időigényes fizikai szerszámpróbák előtt [12].
+
+5.3. A Pontos Anyagmodellek Jelentősége
+A VEM szimuláció pontossága alapvetően függ a bemeneti adatok, különösen a felhasznált
+anyagmodell helyességétől. A ”szemét be, szemét ki” (garbage in, garbage out) elve itt
+hatványozottan érvényesül.
+A mélyhúzás valósághű modellezéséhez elengedhetetlen egy olyan anyagmodell, amely
+képes leı́rni:
+• A folyásgörbét: Az alakı́tási keményedés pontos leı́rása kulcsfontosságú a feszültségek
+és erők helyes meghatározásához.
+• A képlékeny anizotrópiát: Az r-értékek (normál és sı́kbeli anizotrópia) figyelembevétele nélkülözhetetlen a valósághű anyagáramlás, az elvékonyodás és különösen
+a csúcsosodás jelenségének pontos előrejelzéséhez [4, 26]. A fejlett anizotróp folyási
+feltételek (pl. Hill ’48) beépı́tése a VEM szoftverekbe alapvető követelmény a
+megbı́zható lemezalakı́tási szimulációkhoz.
+
+5.4. A VEM mint a Komplexitáskezelés Eszköze
+A 4. fejezetben bemutatott analitikus képletek, mint például a húzóerő számı́tására
+szolgáló összefüggés [20], kiválóan alkalmazhatók egyszerű, forgásszimmetrikus alkatrészek
+esetében. Azonban a modern ipar, különösen az autóipar, egyre bonyolultabb, aszimmetrikus formákkal dolgozik, mint például egy sárvédő vagy egy ajtópanel.
+Ezeknél az alkatrészeknél a geometria komplex, az alakváltozás a felületen pontról
+pontra változik, a súrlódási viszonyok nem egyenletesek, és az anizotróp anyag minden
+irányban másképp reagál a terhelésre. Egy ilyen összetett problémára nem létezik zárt,
+analitikus matematikai megoldás.
+A Végeselemes Módszer [27, 19] pontosan ezt a látszólag megoldhatatlan komplexitást
+kezeli. A módszer a problémát több ezer vagy akár több millió apró, egyszerűen kezelhető
+”mini-problémára” – a végeselemekre – bontja. A szoftver minden egyes elemre megoldja
+az alapvető fizikai egyenleteket, figyelembe véve az anyag nemlineáris és anizotróp viselkedését, majd ezeket az eredményeket numerikusan ”összeilleszti”, hogy a teljes alkatrész
+komplex viselkedését leı́rja.
+A VEM valódi ereje tehát nem csupán a ”virtuális kı́sérletezésben” rejlik. A módszer
+képessé teszi a mérnököket arra, hogy egyetlen, prediktı́v modellben integrálják a bonyolult geometriát, a 2. fejezetben tárgyalt anizotróp anyagviselkedést és a komplex peremfeltételeket (kontakt, súrlódás). Ez teszi lehetővé nemcsak a hibák előrejelzését, hanem
+13
+
+a folyamat aktı́v optimalizálását is. A szimuláció segı́tségével választ lehet adni olyan
+kritikus kérdésekre, mint: ”Pontosan hova kell elhelyezni egy fékezőbordát a szakadás elkerülésére?”, ”Milyen legyen a kiinduló lemez kontúrja, hogy a végtermék a legkevesebb
+hulladékkal legyen gyártható?”, vagy ”Hogyan változtassuk a ráncfogó erőt a löket során
+a visszarugózás minimalizálása érdekében?”. A VEM tehát a modern mérnöki tervezés
+elengedhetetlen eszköze a komplexitás legyőzésére és az innovatı́v, hatékony gyártási folyamatok fejlesztésére.
+
+6. Következtetések
+A mélyhúzási folyamat és a mélyhúzott minták anizotrópiájának vizsgálata egy összetett,
+több tudományterületet érintő feladat, amely a fémfizikától a gépészeti tervezésen át a
+numerikus modellezésig terjed. A bemutatott irodalmi áttekintés alapján a következő fő
+következtetések vonhatók le:
+1. Az anizotrópia központi szerepe: A lemezanyagok képlékeny anizotrópiája nem
+egy elhanyagolható másodrendű jelenség, hanem a mélyhúzási folyamat minden
+aspektusát alapvetően meghatározó tulajdonság. A normál anizotrópia (rm ) szabja
+meg a maximálisan elérhető húzási mélységet, mı́g a sı́kbeli anizotrópia (∆r) a
+késztermék minőségét, a csúcsosodás mértékét. Az ideális mélyhúzó lemez egyszerre
+rendelkezik magas normál anizotrópiával és nullához közeli sı́kbeli anizotrópiával.
+2. A mélyhúzás mint optimalizálási feladat: A sikeres mélyhúzás a ráncosodás
+és a szakadás közötti szűk technológiai ablakban való működést jelenti. A folyamat
+paramétereinek (pl. ráncfogó erő) és a szerszám geometriájának (pl. lekerekı́tési
+sugarak, fékezőbordák) precı́z beállı́tása egy komplex optimalizálási feladat, ahol a
+cél az anyagáramlás szabályozása a hibák elkerülése érdekében.
+3. A szerszámtervezés mint az anyagáramlás-menedzsment eszköze: A mélyhúzó
+szerszám nem passzı́v formaadó elem, hanem egy aktı́v mérnöki szerkezet, amelynek
+geometriai jellemzői tudatosan szabályozzák az anyag áramlását. A tervezés során
+a mérnök egy ”fizikai algoritmust” hoz létre, amely a lemezt a kı́vánt alakváltozási
+pályára kényszerı́ti.
+4. A VEM mint a komplexitáskezelés elengedhetetlen eszköze: A modern,
+komplex geometriájú alkatrészek mélyhúzásának analitikus leı́rása lehetetlen. A
+Végeselemes Módszer az egyetlen olyan eszköz, amely képes egyetlen modellben
+integrálni a bonyolult geometriát, a nemlineáris, anizotróp anyagviselkedést és a
+változó peremfeltételeket. A VEM nemcsak a hibák előrejelzését teszi lehetővé,
+hanem a teljes folyamat optimalizálását is, a terı́tékformától a szerszámgeometrián
+át a technológiai paraméterekig.
+A diplomamunka, amely egy mélyhúzott minta anizotrópiáját vizsgálja, ezen alapelvekre épı́tve tud értékes eredményeket elérni. A kı́sérleti vizsgálatok (pl. csúcsosodás
+mérése) és a numerikus szimulációk (VEM) összevetése lehetőséget teremt a felhasznált
+anizotróp anyagmodellek validálására és a technológiai folyamat mélyebb megértésére.
+
+14
+
+Hivatkozások
+[1] Altan, T., Ngaile, G., & Shen, G. (2005). *Cold and Hot Forging: Fundamentals
+and Applications*. ASM International.
+[2] ASTM E517-19 (2019). *Standard Test Method for Plastic Strain Ratio r for Sheet
+Metal*. ASTM International.
+[3] Banabic, D. (Ed.). (2010). *Sheet Metal Forming Processes: Constitutive Modelling
+and Numerical Simulation*. Springer.
+[4] Barlat, F., et al. (2003). Plane stress yield function for aluminum alloy sheets—part
+I: theory. *International Journal of Plasticity*, 19(9), 1297-1319.
+[5] Beer, F. P., Johnston, E. R., DeWolf, J. T., & Mazurek, D. F. (2012). *Mechanics
+of Materials*. McGraw-Hill.
+[6] Dieter, G. E. (1988). *Mechanical Metallurgy*. McGraw-Hill.
+[7] Doege, E., & Behrens, B. A. (2006). *Handbuch der Umformtechnik: Grundlagen,
+Technologien, Maschinen*. Springer.
+[8] Dowling, N. E. (2013). *Mechanical Behavior of Materials: Engineering Methods for
+Deformation, Fracture, and Fatigue*. Pearson.
+[9] Engler, O., & Randle, V. (2005). *Introduction to Texture Analysis: Macrotexture,
+Microtexture, and Orientation Mapping*. CRC Press.
+[10] Gróf, Gy. (2005). *A képlékenyalakı́tás elmélete és gyakorlata*. Műszaki Könyvkiadó, Budapest.
+[11] Hoffmann, H., et al. (2012). *Werkzeugbau für die Blechumformung*. Springer Vieweg.
+[12] Hosford, W. F. (2010). *Metal forming: mechanics and metallurgy*. Cambridge
+University Press.
+[13] Hull, D., & Bacon, D. J. (2011). *Introduction to Dislocations*. ButterworthHeinemann.
+[14] Kalpakjian, S., & Schmid, S. R. (2014). *Manufacturing Engineering and Technology*. Pearson.
+[15] Lange, K. (Ed.). (1985). *Handbook of Metal Forming*. McGraw-Hill.
+[16] Lankford, W. T., Snyder, S. C., & Bauscher, J. A. (1950). New criteria for predicting
+the press performance of deep drawing sheets. *Transactions of the ASM*, 42, 11971232.
+[17] Marciniak, Z., Duncan, J. L., & Hu, S. J. (2002). *Mechanics of sheet metal forming*.
+Butterworth-Heinemann.
+[18] Papeleux, L., & Ponthot, J. P. (2002). Finite element simulation of wrinkling in deep
+drawing processes. *Journal of Materials Processing Technology*, 125, 755-762.
+15
+
+[19] Reddy, J. N. (2006). *An Introduction to the Finite Element Method*. McGraw-Hill.
+[20] Schuler GmbH (Ed.). (1998). *Metal Forming Handbook*. Springer.
+[21] Simo, J. C., & Hughes, T. J. R. (1998). *Computational Inelasticity*. Springer.
+[22] Tisza, M. (2010). *A képlékeny kézi- és gépi alakı́tás technológiája*. Miskolci Egyetemi Kiadó, Miskolc.
+[23] Voith, M. (2011). *Képlékenyalakı́tás:
+Gépészmérnöki Kar, Miskolc.
+
+Előtanulmányok*. Miskolci Egyetem,
+
+[24] Wagoner, R. H., & Chenot, J. L. (2006). *Fundamentals of metal forming*. John
+Wiley & Sons.
+[25] Wilson, D. V., Butler, R. D. (1966). The role of plastic anisotropy in sheet metal
+forming. *Journal of the Institute of Metals*, 94, 25-33.
+[26] Yoshida, K., et al. (1982). Mechanism of earing in deep drawing of anisotropic sheet
+metals. *J. Japan Soc. Tech. Plasticity*, 23(262), 921-929.
+[27] Zienkiewicz, O. C., Taylor, R. L., & Zhu, J. Z. (2013). *The Finite Element Method:
+Its Basis and Fundamentals*. Butterworth-Heinemann.
+
+16
+
+

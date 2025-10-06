@@ -1,0 +1,112 @@
+Irodalmi áttekintés – Mélyhúzott minta
+anizotrópiájának vizsgálata
+Képlékeny alakítás általában
+A képlékeny alakítás a fémek olyan megmunkálási módja, amely során külső erő hatására az
+anyag maradandóan megváltoztatja alakját, miközben az anyag folytonossága nem szakad
+meg, azaz nem keletkezik törés vagy szakadás, a test tömege pedig változatlan marad. A
+képlékeny alakítás feltételezi, hogy az anyag képlékeny – vagyis megfelelő külső terhelés
+hatására tartósan, szakadás nélkül képes átalakulni. A módszer egyik előnye, hogy
+anyagveszteség nélkül, gyakran forgácsképződés nélkül jön létre az alakváltozás, ezért
+„forgács nélküli megmunkálásnak” is nevezik. Fontos képlékeny alakítási eljárások: kovácsolás,
+hengerlés, húzás, kisajtolás, mélyhúzás stb. Az alakváltozás rendszerint rugalmas deformációval
+kezdődik, majd amikor a ható feszültség eléri a folyáshatárt, bekövetkezik a képlékeny
+alakváltozás, amelyet többek közt csúszás (atomsíkok elmozdulása) vagy ikerképződés kísér. [1]
+[2] [3] [4] [5]
+
+Mélyhúzás részletesen
+A mélyhúzás egy lemezalakító művelet, amelynek során sík lemezből főként húzó
+igénybevétellel vékonyfalú, üreges testeket (pl. csésze, pohár, edény) állítanak elő. Ez a művelet
+a vékonyfalú üreges testek tömeges gyártásában az egyik leggazdaságosabb technológia. A
+mélyhúzó művelet során a kiinduló lemezt ráncfogó szerszám segítségével tartják elő, majd egy
+húzóbélyeg a lemezt a húzógyűrűbe húzza. A folyamat során a lemez különböző szakaszai
+eltérő igénybevételeknek vannak kitéve: a perem részen koncentráltan jelentkeznek a
+képlékeny alakváltozások, a lemez vastagsága egyes helyeken csökkenhet vagy megnőhet, a
+húzás mélységével változnak a húzó- és nyomófeszültségek. Ha nem megfelelő a technológia,
+ráncosodás léphet fel, ezt a ráncfogó akadályozza meg. Nagyobb húzási mélységekhez
+ráncfogó szükséges, kisebb mélységeknél elhagyható. [6] [7] [8] [9]
+
+Mélyhúzó szerszámok felépítése és működése
+A mélyhúzó szerszám fő elemei rendszerint a húzógyűrű, a húzóbélyeg és a leszorító/ráncfogó.
+A szerszámok lehetnek ránctartóval szereltek (merev vagy rugalmas vezérlés), vagy
+egyszerűbb, ránctartó nélküli verziók is szokásosak. A szerszám kialakítása meghatározza a
+munkadarab minőségét, mivel a nem megfelelő kialakítás esetén a kész darab ráncosodhat
+vagy más hibák (pl. vastagság-csökkenés, repedés) jelentkezhetnek. A ráncosodás elkerülése
+érdekében a húzógyűrűn felfekvő lemezt ráncfogóval kell szorítani, ez is növeli az alakítás
+erőszükségletét. [7] [8] [10]
+
+Mélyhúzó szerszámok tervezése, terhelések
+A mélyhúzó szerszámok tervezésekor figyelembe kell venni a lemez vastagságát,
+alakíthatóságát, az anyag szakítószilárdságát, illetve a geometriai viszonyokat. A szerszámban
+keletkező fő terhelések: húzó-, nyomó-, hajlító- és súrlódási erők. A szerszámok helyes
+méretezésével meghatározható a szükséges húzó- és ráncfogó-erő, amelyeket a szerszám
+kialakításánál optimalizálni kell. A szerszám és a gyártógép teljesítményének összehangolása is
+kulcsfontosságú. A tervezés során numerikus szimulációk, például a végeselemes módszer
+(VEM) is alkalmazható az igénybevételek és alakváltozások előzetes vizsgálatára. [11] [12] [13] [14]
+
+VEM – Végeselemes módszer
+A végeselemes módszer (VEM) numerikus eljárás, amelyet főleg mérnöki és alkalmazott
+tudományos feladatokban – például gépalkatrészek szilárdsági, lengéstani vagy áramlástani
+vizsgálata során – alkalmaznak parciális differenciálegyenletek közelítő megoldására. A vizsgált
+testet vagy szerkezetet véges számú, általában egyszerű alakú (háromszög, négyszög,
+tetraéder stb.) elemekre bontják, majd ezek együttes viselkedését számítják ki. A VEM
+segítségével jól vizsgálhatók összetett formájú, többféle terhelésű alkatrészek belső
+feszültségei és alakváltozásai. A módszer gépi számításra épül, eljárása magába foglalja a
+modell hálózását, a peremfeltételek és terhelések megadását, az egyenletrendszer (merevségi
+mátrix) összeállítását, végül a számítást és az eredmények értékelését posztprocesszor
+szoftverrel. [15]
+A VEM alkalmazási területei:
+Szilárdságtani, hőtani, rezgéstani és áramlástani problémák vizsgálata
+Szerkezeti stabilitás (pl. kihajlás, horpadás)
+Hővezetési problémák, hőfeszültségek elemzése
+Mágneses, elektrosztatikus, geotechnikai, hidrológiai problémák számítása
+A legismertebb alkalmazások a gépészeti tervezői munkában és az építőmérnöki gyakorlatban
+terjedtek el, különféle kereskedelmi és ingyenes programcsomagok támogatásával. [15]
+Hivatkozások:
+⁂
+
+1. https://tudasbazis.sulinet.hu/hu/szakkepzes/gepeszet/gepeszeti-szakismeretek-2/a-keplekenyalakitasbiztonsagtechnikai-eloirasai/keplekeny-alakitas-attekintes
+2. https://www.nive.hu/Downloads/Szakkepzesi_dokumentumok/Bemeneti_kompetenciak_meresi_ertekele
+si_eszkozrendszerenek_kialakitasa/5_0111_017_101215.pdf
+3. https://www.scribd.com/document/610451549/Keplekenyalakitas-jegyzet
+4. https://hu.wikipedia.org/wiki/Képlékeny_alakítás
+5. https://www.nive.hu/Downloads/Szakkepzesi_dokumentumok/Bemeneti_kompetenciak_meresi_ertekele
+si_eszkozrendszerenek_kialakitasa/5_0095_005_101115.pdf
+6. https://www.scribd.com/document/654055366/Melyhuzas-technologiaja
+
+7. https://tudasbazis.sulinet.hu/hu/szakkepzes/gepeszet/gepeszeti-szakismeretek-2/a-melyhuzas-technol
+ogiaja/melyhuzas-technologiaja
+8. https://www.muszeroldal.hu/measurenotes/gepiparitechnologiak.pdf
+9. https://real.mtak.hu/109564/1/2019_1_ENG_008_Beres.pdf
+10. https://tudasbazis.sulinet.hu/hu/szakkepzes/gepeszet/gepeszeti-szakismeretek-2/a-melyhuzas-szersza
+mai-es-segedberendezesei/melyhuzo-szerszam-kialakitasok
+11. https://real.mtak.hu/150825/1/XXIII_FMTU-BertokAdam.pdf
+12. https://color-metal.ro/hu/lemezek-melyhuzasa-az-eljaras-leirasa
+13. http://geik.uni-miskolc.hu/intezetek/SALYI/content/176/176_53.pdf
+14. https://techstorym2m.hu/lemezalkatreszek-tervezese-es-lemezalakito-szerszamok-az-ajanlatadastol-a
+-gyartasig.html
+15. https://hu.wikipedia.org/wiki/Végeselemes_módszer
+16. http://users.atw.hu/gepesz-lev/3felev/Mtech.pdf
+17. https://fr.scribd.com/document/637745111/Keplekeny-Alakitas-1-11
+18. https://www.att.bme.hu/neptuncode/BMEGEMTBGF1/eloadasok/12_Képlékenyalakítás_1.pdf
+19. https://gradus.kefo.hu/archive/2022-1/2022_1_ENG_002_Beres.pdf
+20. https://www.scribd.com/document/485596911/atg-lemez-ea08
+21. https://bgk.uni-obuda.hu/gti/att/wp-content/uploads/2023/09/keplelma.pdf
+22. https://mersz.hu/dokumentum/m410kaaj__65/
+23. https://hu.jidemachinery.com/info/professionals-must-understand-the-structure-an-85052461.html
+24. http://teo.elte.hu/minosites/ertekezes2008/horvath_gy.pdf
+25. https://szerszamokgyartasa.hu/melyhuzo-szerszam/
+26. http://www.mech.uni-miskolc.hu/~abaksa/education/notes/VEM-ME-jegyzet.pdf
+27. http://old.bgk.uni-obuda.hu/ggyt/targyak/seged/bagms15nnk/02.pdf
+28. https://www.nive.hu/Downloads/Szakkepzesi_dokumentumok/Bemeneti_kompetenciak_meresi_ertekele
+si_eszkozrendszerenek_kialakitasa/5_0203_003_101115.pdf
+29. https://www.scribd.com/document/385484209/34-szerszamkeszito-eulogkorl
+30. https://www.studocu.com/hu/document/obudai-egyetem/alakitastechnologia-es-gepei-i/vem-me-jegyz
+et-a-vegeselem-modszer-alapjai/100741732
+31. https://metal-work2003.hu/szolgaltatasok/mero-es-ellenorzo-keszulekek-tervezese-es-gyartasa/
+32. https://es.scribd.com/document/654055366/Melyhuzas-technologiaja
+33. http://mmfk.nyf.hu/~gepgyartas/magt/hallgatok/feladatok/vem/2011/VEMsegedlet01.pdf
+34. https://metal-work2003.hu/szolgaltatasok/melyhuzo-szerszamok/
+35. https://www.mm.bme.hu/~gyebro/files/vem/kovacs-szekrenyes_vegeselem_modszer.pdf
+36. https://mersz.hu/dokumentum/m410kaaj__59/
+
+

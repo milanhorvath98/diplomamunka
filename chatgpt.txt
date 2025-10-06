@@ -1,0 +1,210 @@
+Általános képlékeny alakítás és fizikai alapok
+A képlékeny alakítás során a fémekben maradandó alakváltozás jön létre, amikor a külső terhelés
+hatására a fajlagos alakváltozás eléri a folyáshatárt 1 . Ez a tartós alakváltozás atomos szinten a
+kristálysíkok menti csúszással (diszlokációk mozgásával) valósul meg 2 . A képlékeny alakítást célszerű
+csoportosítani aszerint, hogy nyomófeszültségek dominálnak-e (pl. kovácsolás, hengerlés) vagy húzónyomó igénybevételek (pl. rúd- és dróthúzás, mélyhúzás) 3 . Mindkét csoportban a felhasznált anyag
+tömege nem változik, a terhelés elve – pl. folyási görbe, képlékenységi kritérium (Tresca, Huber–Mises
+stb.) – az alkalmazott anyagmodellek alapján írható le 2 3 . A fémek képlékenysége tehát olyan
+tulajdonság, amely lehetővé teszi, hogy külső terhelésre maradandó alakváltozást szenvedjenek
+anélkül, hogy az anyag törne 1 .
+
+Mélyhúzás technológiája
+A mélyhúzás során síklemezből (ún. terítékből) vékony falú, üreges testet (pl. csészét, poharat) állítunk
+elő 4 . A folyamat lényege, hogy a teríték peremét a lekerekített húzógyűrűn át egy megfelelően
+kialakított bélyeg átszállítja a húzószerszámba. A mélyhúzási folyamat során a terítéket és a szerszámot
+kenőanyaggal kezelik, hogy csökkentsék a súrlódást, és szigorú szabályozással beállítják a behúzóerőt
+és a ráncfogó (blank-holder) erősségét. A húzási fokozat (draw ratio) fontos jellemző: egyszerű esetben
+a behúzott és a kiindulási átmerő arányával definiálható. Például Bertók és munkatársai egy számítással
+igazolták, hogy egy adott teríték- és bélyegmérettel mi a maximálisan elérhető húzási arány 5 . A
+mélyhúzható anyagoknak általában nagy nyújthatóságúnak kell lenniük – elnevezésük (mélyhúzható
+acél, réz-, alumíniumlemez) is erre utal 6 7 . Kondás és Mertinger (2022) szerint a tipikus
+mélyhúzható lágyacélok hidegen hengerelt, lágy, ötvözetlen acélok, melyek kiemelkedő alakváltozási
+képességgel rendelkeznek 8 . Az acélok hidegalakítási öregedése ugyanakkor rontja a
+mélyhúzhatóságot 6 .
+Mélyhúzással készült termékek például a konzervdobozok, fürdőkádak és egyéb háztartási tárgyak, a
+műanyag formák (hőkupolák), valamint a járműipar nagy sorozatban gyártott alkatrészei (pl. kaszni
+panelelemek, csaptelepek, hajtóműhengerek burkolatai) 9 . A mélyhúzást többnyire hidegalakításként
+hajtják végre, de különleges esetekben (vastagabb lemez, nagy átalakítás) előmelegítést is alkalmaznak.
+A technológiát méretező szabvány (pl. MSZ 5731) előírja a csészehúzó próbát, mely során
+meghatározzák azt a legnagyobb átmérőjű kosár alakú tárgyat (csészét), amit adott anyagból még
+szakadás nélkül ki lehet húzni – ez jellemzően a maximális húzási fokozatot adja 10 .
+
+Mélyhúzó szerszámok felépítése és anyagai
+A mélyhúzószerszám alapvető elemei: a húzógyűrű (matrica), a húzóbélyeg (punch) és a leszorító
+(ráncfogó) 11 . A húzógyűrűbe illesztett betét és a lefelé mozgó bélyeg alakítja át a terítéket, miközben
+a leszorító (blank-holder) az élnél fogva rögzíti a lemezt. A szerszámok változatai között
+megkülönböztetünk előhúzó és továbbhúzó egyműveletes kivitelűt, illetve többlépéses (soros/blokk)
+szerszámokat, melyek több alakítási lépést egy gépben végeznek el 12 . Egyszerűbb szerszámok
+ránctartó nélküli kivitelűek, nagy szériákban azonban ránctartós (blankholderrel) szerszámokat
+alkalmaznak, ahol a ránctartó előredőlve megakadályozza a perem kipúposodását 12 13 . A
+
+1
+
+működtető gép típusától függően készülnek egyszeres és kettős vagy hármas működésű présekhez
+tervezett mélyhúzószerszámok is 12 .
+A szerszámalakok készülhetnek speciális szerszámacélokból (pl. SKD11/1.2344, AISI D2), amelyek nagy
+keménységet és kopásállóságot biztosítanak 14 . Gyakran alkalmaznak részleges edzést vagy
+felületbevonatot, hogy a bélyeg és matrica felületének élettartamát növeljék. A szerszámanyag
+kiválasztásánál figyelembe veszik az anyag galvanizált felületét és a felületkezelését is, mivel ezek
+befolyásolják a súrlódást és a kopás mértékét 13 . A szerszámban a dolgozó felület geometriáját – pl.
+bélyeg- és matricaátmérőt, lekerekítési sugarakat – szigorúan precíziós kialakítják, mert a perem
+ráncosodása és a forma pontossága nagyban függenek ezektől. A megfelelő anyagválasztás
+(keménység, ütőszilárdság), kenőanyag használat és pontos befogás mind kulcsfontosságú a szerszám
+megfelelő működéséhez.
+
+A mélyhúzó szerszámok fő változatai 12
+• Egyműveletes szerszámok: Egyszerre egyetlen rántás történik (előhúzó, továbbhúzó).
+• Többlépéses szerszámok: Különböző alakító műveletek (kivágás, továbbhúzás) egy vagy több
+löket során.
+• Ránctartó nélküli vs. ránctartós kivitel: Egyszerű szerszámoknál a blank pereme csak a
+súrlódásra támaszkodik; ránctartós szerszámokban a leszorító aktív nyomással akadályozza a
+perem hullámosodását 13 .
+• Gép szerint: Vezetőoszlopos vagy vezetést nem igénylő kivitel; alkalmas egyszeres vagy kettős
+préseken való alkalmazásra 12 .
+
+Mélyhúzó szerszámok tervezése: szempontok,
+terhelések, kopás, hűtés, élettartam
+A mélyhúzó szerszám tervezésénél elsődleges szempont a geometriák optimalizálása és a működési
+terhelések kiszámítása. A terítékperem–szerszám érintkezése során a peremet tangenciális
+nyomófeszültség és radiális húzófeszültség terheli egyszerre 15 , ezért a ránctartó nyomóerejét úgy kell
+megválasztani, hogy megakadályozza a perem felpúposodását anélkül, hogy túlzottan megnövelné a
+húzófeszültséget és ezzel a későbbi szakadás kockázatát 15 13 . A teríték egyenletes behúzásához a
+bélyeg és matrica kerekítési sugarát gondosan állítják be (hüvelyszerszám-tervezési segédletek szerint),
+mivel a túl kicsi sugár repedéshez, a túl nagy sugár pedig alakhibákhoz vezethet. A súrlódási
+viszonyokat (így a kenőanyag fajtáját és mennyiségét) a felületminőség és a lemez anyaga szerint
+optimalizálják, hiszen a súrlódás a kopás fő oka. A kopás minimalizálása érdekében gyakran
+alkalmaznak keménység- és kopásállóság javító eljárásokat (pl. tűzihorgany bevonat nélküli acél,
+speciális edzés vagy nitridálás a szerszámon), valamint kenőrétegeket.
+A tervezés során figyelembe veszik a dinamikus igénybevételeket is: a gyors nyomó- és visszaugrási
+mozgások, ütődések a szerszám élettartamát lerövidíthetik. Nagyteljesítményű termelésben gyakran
+vízhűtéses csatornákat építenek be a szerszámtestbe, hogy a hőt elvezessék és megőrizzék a pontos
+termikhőmérsékletet (a hőmérsékletváltozás alapanyag-feszültséget okozhat). A szerszámok
+karbantartása során periódikusan ellenőrzik a felületi sérüléseket (elkopott élkeret, karcok), és szükség
+esetén újraélezik vagy újraedzik a kritikus részeket. A kopás mértékét a gyártási mennyiség (ciklusok
+száma) határozza meg, a modern gyártócégek ezért gyakran alkalmaznak kopásjelző bevonatokat vagy
+elektronikusan monitorozott terhelést a szerszám élettartamának becslésére. Összességében a
+mélyhúzó szerszám tervezése komplex feladat: egyszerre kell optimalizálni a geometriát,
+
+2
+
+anyagválasztást, kenést és hűtést úgy, hogy a várt gyártási darabszám alatt se következzen be idő előtti
+tönkremenetel.
+
+Végeselemes módszer (FEM) a mélyhúzás
+modellezésében
+A mélyhúzás során fellépő bonyolult alakváltozások és érvényesülő feszültségállapotok elemzésére
+széles körben alkalmazzák a végeselemes módszert (FEM). A FEM szimuláció segítségével – amint azt
+Bertók és mtsai is bemutatják – elemezhető a lemez deformációja, feszültsége és a kritikus jelenségek
+(fenékleszakadás, ráncosodás) előfordulása egy paraméterezett mélyhúzó-modellben 16 5 . Bertókék
+axiszimmetrikus modellt készítettek MSC MARC szoftverrel, ahol a lemezt rugalmas-képlékeny DC03-as
+acélnak tételezték fel (izotróp anyagmodell) 17 . A szimulációk például megmutatták, hogy bizonyos
+géometriai kombinációknál mikor szakadhat le a darab fenékrésze 5 , illetve kiszámíthatóvá vált a
+kritikus húzóerő és a maximális húzási fokozat 5 .
+Az anizotrópia hatásának figyelembevétele érdekében az alakítási szimulációkhoz speciális
+képlékenységi kritériumokat használhatnak. Két-három irányra kiterjedő anizotrópia leírására
+elterjedt megoldás a Hill- vagy a Barlat-féle többparaméteres folyási kritérium 18 19 . Wang és mtsai
+(2024) említik, hogy a nagy húzásra alkalmas lemezek irányfüggő kristályszerkezete jelentős earing
+(élhullámosodás) hajlamot okozhat mélyhúzáskor 18 . Basak és munkatársai (2020) például a
+Marciniak–Kuczyński modellben Hill- és a nemkvadratikus Barlat Yld2000-2d kritériumokat alkalmaztak
+az alakíthatóság (formálhatósági diagram) előrejelzésére 19 . Általánosan elmondható, hogy míg a
+hagyományos FEM-programok (pl. Abaqus) a von Mises képlékenységi modellt támogatják, addig a
+fejlettebb anizotróp leírásokhoz (pl. Yld2000-2d) vagy speciális ömlesztett programokat, vagy
+felhasználói alprogramokat (UMAT) kell alkalmazni 20 . Például Wang et al. megjegyzik, hogy néhány
+dedikált szoftver gyárilag tartalmazza a Yld2000-2d kritériumot, míg az Abaqus 6.x verziójához utólagos
+kiegészítéssel lehet azt igénybe venni 20 .
+A végeselemes modellek alkalmazása nemcsak a szerszámtervezésben segít (pl. AutoForm, Pam-Stamp,
+Marc, Abaqus, LS-DYNA szoftverekben), hanem a mélyhúzási jelenségek jobb megértéséhez is
+hozzájárul. A FEM-szimulációkkal vizsgálható például a blank peremhűtése, a kenőanyag hatása, a
+geometria optimalizációja vagy a különböző lépésenkénti erő-út karakterisztikák. Béres és Tisza (2019)
+kiemeli, hogy napjainkban már elterjedt a bifurkációs és energiaalapú elméleteken túlmenő FEMelemzések használata, valamint a speciális AutoForm szoftver alkalmazása a ráncosodás és szakadás
+előrejelzésére 21 . Összességében a FEM elmélet és eszköztár lehetővé teszi az anizotróp
+anyagviselkedés (Lankford-egyenlőtlenségi tényezők, feszültség–alakváltozás mérések) beépítését a
+mélyhúzási szimulációba, így segít a valódi alakítási körülmények minél pontosabb modellezésében 18
+19 .
+Források: A fejezetben hivatkozott szakirodalom a mélyhúzás alap- és alkalmazott kutatására
+vonatkozó tudományos cikkekből, szakirodalmi jegyzetekből és gyakorlati tapasztalatokat összegző
+forrásokból származik. Konkrét hivatkozások: Béres–Tisza (2019) a ráncosodás elméleti becsléseiről 15
+13 , Bertók et al. (2018) FEM-analízisekről 16
+5 , Wang et al. (2024) az anizotrópia mélyhúzásra
+gyakorolt hatásáról 18 , Kondás–Mertinger (2022) a mélyhúzható acélok jellemzőiről 6 , valamint a
+Sulinet tananyag mélyhúzó szerszámok és termékek ismertetéséről 11 9 . Emellett számos egyetemi
+jegyzet és szabvány is támasztja alá a fenti megállapításokat.
+
+3
+
+1
+
+2
+
+Képlékenység: a fogalom magyarázata és jelentősége az anyagtudományban - Elo.hu
+
+https://elo.hu/keplekenyseg-a-fogalom-magyarazata-es-jelentosege-az-anyagtudomanyban/
+3
+
+Képlékeny alakítás – Wikipédia
+
+https://hu.wikipedia.org/wiki/K%C3%A9pl%C3%A9keny_alak%C3%ADt%C3%A1s
+4
+
+13
+
+15
+
+21
+
+real.mtak.hu
+
+https://real.mtak.hu/109564/1/2019_1_ENG_008_Beres.pdf
+5
+
+10
+
+16
+
+17
+
+(PDF) Mélyhúzás végeselemes modellezésének technológiai és elméleti felhasználása
+
+https://www.academia.edu/81743194/
+
+M%C3%A9lyh%C3%BAz%C3%A1s_v%C3%A9geselemes_modellez%C3%A9s%C3%A9nek_technol%C3%B3giai_%C3%A9s_elm%C3%A9leti_felhaszn%C3
+6
+
+8
+
+Doktorandusz Almanach - 1.kötet/1.volume (2022)
+
+https://epa.oszk.hu/04600/04692/00001/pdf/EPA04692_doktorandusz_almanach_2022_326-335.pdf
+7
+
+9
+
+11
+
+12
+
+Gépészeti szakismeretek 2. | Sulinet Tudásbázis
+
+https://tudasbazis.sulinet.hu/hu/szakkepzes/gepeszet/gepeszeti-szakismeretek-2/a-melyhuzas-technologiaja/melyhuzastechnologiaja
+14
+
+SKD11 szerszámacél
+
+http://hu.fcstoolsteel.com/product/skd11-tool-steel
+18
+
+20
+
+Study of Anisotropic Behavior in Sheet Metal Forming
+
+https://www.mdpi.com/1996-1944/17/9/2031
+19
+
+Formability and fracture in deep drawing sheet metals: Extended studies for pre-strained
+
+anisotropic thin sheets - Seoul National University
+https://snu.elsevierpure.com/en/publications/formability-and-fracture-in-deep-drawing-sheet-metals-extended-st
+
+4
+
+
